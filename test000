@@ -1,1 +1,3 @@
 i am test the created file...
+ng generate component 'comp-name' (ng g c 'name')
+generate the new component 
