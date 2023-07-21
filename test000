@@ -1,29 +1,4 @@
 i am test the created file...
-ng generate component 'comp-name' (ng g c 'name')
-generate the new component 
-app.component.html------->>>
 
-<h2> My Name</h2>
-<h1 class="po">Popaay</h1>
-<div class="nume"><br><br>
-<form action="">
-  UserName<input type="text" placeholder="Entar your Username">  <br><br>
-  Password<input type="password" placeholder="Entar your password">
-</form><br><br>
-<app-login></app-login>
-<app-sign-up></app-sign-up>
-</div>
-_________________________________________________________________
-app.component.css------>>>
-
-.nume{
-    background-color: rgb(79, 187, 79);
-    width: 250px;
-    height: 250px;
-    margin: auto;
-}
-.po{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgb(79, 187, 79);
-}
-_________________________________________________________________
+generate the new component
+--commend> ng generate component 'comp-name' (ng g c 'name')
