@@ -1,0 +1,51 @@
+{
+  "owner": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "Fullname": "",
+      "id": 2
+    },
+    {
+      "Fullname": "PAVAN THORAT",
+      "id": 3
+    },
+    {
+      "Fullname": "PAVAN THORAT",
+      "Email": "pavan@test.in",
+      "PanCard": "AWSPT5862D",
+      "MobileNo": 7507592465,
+      "AdharNo": 795436079524,
+      "Gender": "Male",
+      "Username": "pkthorat",
+      "Password": "Pass@123",
+      "confirmPassword": "Pass@123",
+      "id": 4
+    },
+    {
+      "Fullname": "KK",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 5
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "user": {
+    "name": "typicode"
+  }
+}

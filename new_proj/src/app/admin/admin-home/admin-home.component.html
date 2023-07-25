@@ -1,0 +1,23 @@
+<br>
+<button mat-raised-button color="accent" (click)="backtohome()">Back</button><br><br>
+
+<body class="bckbody">
+
+    <div class="logpa">
+        <h2 class="heading">Login Page</h2>
+        <form>
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" class="inputbox">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password"  class="inputbox">
+            </mat-form-field>
+            <button mat-raised-button class="logbttn"> Login </button>
+        </form><br><br>
+        <a href="#">Forget Password?</a><br><br>
+        <button mat-warn-button (click)="signUpform()" class="signbttn">Create New Account</button>
+
+    </div>
+</body>

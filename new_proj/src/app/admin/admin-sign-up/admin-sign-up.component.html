@@ -1,0 +1,40 @@
+<p>admin-sign-up works!</p>
+
+<button (click)="backtologin()" mat-raised-button color="accent">Back</button><br><br>
+
+<form class="signupform" [formGroup]="adminSignupform">
+    <mat-form-field>
+        <mat-label>Fullname</mat-label>
+        <input matInput type="text" formControlName="Fullname" placeholder="@Ex Pavan">
+    </mat-form-field><br><br>
+
+    <label>Email</label>
+    <input type="text" formControlName="Email" placeholder="Enter your Email"><br><br>
+
+    <label>PanCard</label>
+    <input type="text" formControlName="PanCard"><br><br>
+
+    <label>MobileNo</label>
+    <input type="number" formControlName="MobileNo" placeholder="+918958100000"><br><br>
+
+    <label>AdharNo</label>
+    <input type="number" formControlName="AdharNo" placeholder="1234 5678 9123"><br><br>
+
+    <label>Gender</label><br><br>
+    <input type="radio" id="male" value="Male" formControlName="Gender">Male
+    <input type="radio" id="male" value="Female" formControlName="Gender">Female
+    <input type="radio" id="male" value="Other" formControlName="Gender">Other <br><br>
+
+    <label>Username</label>
+    <input type="text" placeholder="Set Username" formControlName="Username"><br><br>
+
+    <label>Password</label>
+    <input type="text" placeholder="set Password" formControlName="Password"><br><br>
+
+    <label>confirmPassword</label>
+    <input type="text" placeholder="Confirm Password" formControlName="confirmPassword"><br><br>
+
+    <button (click)="submit()">Submit</button>
+
+
+</form>

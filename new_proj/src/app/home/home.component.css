@@ -1,0 +1,38 @@
+
+.heading{
+    position: relative;
+    top: 23px;
+    font-size: 30px;
+    color: aquamarine;
+    font-family: 'sans-serif';
+    font-weight: bolder;
+    background-color:#ff4081; ;
+    height: 30px;
+    padding: 10px;
+}
+
+.container{
+    background-image: url('src\assets\img\bedroom.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    
+    
+}
+nav{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between
+}
+ul{
+    float: right;
+}
+ul li{
+    display: inline-block;
+    cursor: pointer;
+    
+}
+
+.bttn{
+    margin: 5px;
+   
+}
