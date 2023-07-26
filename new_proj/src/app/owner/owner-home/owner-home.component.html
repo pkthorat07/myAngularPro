@@ -1,19 +1,20 @@
 <p>owner-home works!</p>
-
-<button (click)="backtohome()" mat-raised-button color="accent"  >Back</button><br><br>
+<button (click)="gotosuc()">success</button>
+<button (click)="backtohome()" mat-raised-button color="accent">Back</button><br><br>
 
 <div class="loginField">
-<form >
+<form [formGroup]="ownerLogInform">
 <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
-    <input matInput type="text" placeholder="@Username">
+    <input matInput  type="text" placeholder="@Username" formControlName="Username">
 </mat-form-field><br>
 <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
-    <input matInput type="text" placeholder="Pass@123">
+    <input matInput type="text"  placeholder="Pass@123" formControlName="Password">
 </mat-form-field><br>
 <mat-hint>Do not have account please signup</mat-hint><br><br>
-<button mat-raised-button color="primary">LogIn</button>&nbsp;
+<button mat-raised-button color="primary" (click)="loginForm()">LogIn</button>&nbsp;
 <button mat-raised-button color="primary" (click)="ownerSignUpform()">SignUp</button>
 </form>
+
 </div>
