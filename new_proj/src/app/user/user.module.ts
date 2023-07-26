@@ -13,7 +13,8 @@ import { ShareModule } from '../sharemodule/share/share.module';
   imports: [
     CommonModule,
     UserRoutingModule,
-    ShareModule
+    ShareModule,
+  
   ]
 })
 export class UserModule { }

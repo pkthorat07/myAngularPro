@@ -39,7 +39,7 @@ export class AdminSignUpComponent {
   }
 
   backtologin(){
-    this.router.navigateByUrl('admin')
+    this.router.navigateByUrl('')
   }
   submit(){
     this.formsluesss= this.adminSignupform.value

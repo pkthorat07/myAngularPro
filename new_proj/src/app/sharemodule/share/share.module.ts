@@ -4,9 +4,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from  '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { MatRadioModule } from '@angular/material/radio';
+
+
 @NgModule({
   declarations: [],
 
@@ -19,7 +22,9 @@ import { HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     MatCardModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
+    
     
     
     
@@ -34,7 +39,8 @@ import { HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     MatCardModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
     
     
 

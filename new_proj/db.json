@@ -32,10 +32,154 @@
       "MobileNo": "",
       "AdharNo": "",
       "Gender": "",
+      "Username": "kk",
+      "Password": "kk@123",
+      "confirmPassword": "",
+      "id": 5
+    },
+    {
+      "Fullname": "ANIKET KADAM",
+      "Email": "aniket",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
       "Username": "",
       "Password": "",
       "confirmPassword": "",
-      "id": 5
+      "id": 6
+    },
+    {
+      "Fullname": "jgj",
+      "Email": "hh",
+      "PanCard": "gg",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 7
+    },
+    {
+      "Fullname": "vgh",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 8
+    },
+    {
+      "Fullname": "fkbrrjb",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 9
+    },
+    {
+      "Fullname": "kk",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 10
+    },
+    {
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "GET LOST",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 11
+    },
+    {
+      "Fullname": "DDDDDDDD",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 12
+    },
+    {
+      "Fullname": "",
+      "Email": "xswwwwww",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 13
+    },
+    {
+      "Fullname": "",
+      "Email": "xswwwwww",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 14
+    },
+    {
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "Other",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 15
+    },
+    {
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "Other",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
+      "id": 16
+    },
+    {
+      "Fullname": "Mahesh nimkar",
+      "Email": "mahesh@test.in",
+      "PanCard": "MNNK2020D",
+      "MobileNo": 9028463590,
+      "AdharNo": 892136019925,
+      "Gender": "Male",
+      "Username": "mknimkar",
+      "Password": "Mahesh@123",
+      "confirmPassword": "Mahesh@123",
+      "id": 17
     }
   ],
   "admin": [
@@ -48,4 +192,4 @@
   "user": {
     "name": "typicode"
   }
-}  
+}
