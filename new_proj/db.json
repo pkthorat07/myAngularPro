@@ -18,11 +18,9 @@
       "Email": "pavan@test.in",
       "PanCard": "AWSPT5862D",
       "MobileNo": 7507592465,
-      "AdharNo": 795436079524,
       "Gender": "Male",
       "Username": "pkthorat",
       "Password": "Pass@123",
-      "confirmPassword": "Pass@123",
       "id": 4
     },
     {
@@ -180,6 +178,78 @@
       "Password": "Mahesh@123",
       "confirmPassword": "Mahesh@123",
       "id": 17
+    },
+    {
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "id": 18
+    },
+    {
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "Gender": "",
+      "Username": "AA",
+      "Password": "",
+      "id": 19
+    },
+    {
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
+      "Gender": "Male",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
+      "id": 20
+    },
+    {
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
+      "Gender": "Male",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
+      "id": 21
+    },
+    {
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
+      "Gender": "Male",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
+      "id": 22
+    },
+    {
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
+      "Gender": "Male",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
+      "id": 23
+    },
+    {
+      "Fullname": "RAJ MALLURKAR",
+      "Email": "raj@test.in",
+      "PanCard": "RAJA2121D",
+      "Gender": "Male",
+      "Username": "rjprince",
+      "Password": "Raj@1234",
+      "id": 24
+    },
+    {
+      "Fullname": "RAJ mALLURKAR",
+      "Email": "raj@test.in",
+      "PanCard": "RAJA2151D",
+      "Gender": "Male",
+      "Username": "rjprince",
+      "Password": "Raj@1234",
+      "id": 25
     }
   ],
   "admin": [
