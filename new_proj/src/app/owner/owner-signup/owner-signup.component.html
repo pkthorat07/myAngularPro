@@ -1,32 +1,68 @@
-<p>I am Pro !!</p>
-
-<button (click)="backtologin()" mat-raised-button color="accent">Back</button><br><br>
+<br>
+<button class="bcbuttn" (click)="backtologin()" mat-raised-button color="accent">Back</button><br><br>
 
 <div class="matformfield">
+    <h3>SignUp Form for Hotelowner</h3>
     <form class="signupform" [formGroup]="ownerSignupform">
-        <mat-form-field appearance="outline">
+        <mat-form-field class="matinpt" appearance="outline">
             <mat-label>Fullname</mat-label>
-            <input matInput type="text" formControlName="Fullname" placeholder="@Ex Pavan">
-        </mat-form-field><br>
+            <input matInput type="text" formControlName="Fullname">
 
-        <mat-form-field appearance="outline">
+            <mat-hint *ngIf="!ownerSignupform.get('Fullname')?.touched">
+                please enter your fullname
+            </mat-hint>
+
+            <mat-error *ngIf="ownerSignupform.get('Fullname')?.errors?.['whiteSpace'] && !ownerSignupform.get('Fullname')?.errors?.['minlength'] ">
+                name should not allowd whitespace
+            </mat-error>
+
+            <mat-error *ngIf="ownerSignupform.get('Fullname')?.errors?.['minlength'] && !ownerSignupform.get('Fullname')?.errors?.['pattern'] ">
+                Minimum 5 charecters 
+            </mat-error>
+
+            <mat-error *ngIf="ownerSignupform.get('Fullname')?.errors?.['pattern']">
+                Only alphabats 
+            </mat-error>
+            <mat-error *ngIf="ownerSignupform.get('Fullname')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+        </mat-form-field><br><br>
+
+        <mat-form-field class="matinpt" appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput type="text" formControlName="Email" placeholder="Email@test.in">
-        </mat-form-field><br>
 
-        <mat-form-field appearance="outline">
+            <mat-hint *ngIf="!ownerSignupform.get('Email')?.touched && ownerSignupform.get('Email')?.errors?.['required']">
+                please enter your Email
+            </mat-hint>
+
+            <mat-error *ngIf="ownerSignupform.get('Email')?.errors?.['whiteSpace']">
+                please enter your validEmail
+            </mat-error>
+
+            <mat-error *ngIf="ownerSignupform.get('Email')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+
+        </mat-form-field><br><br>
+
+        <mat-form-field class="matinpt" appearance="outline">
             <mat-label>PanCard</mat-label>
-            <input matInput type="text" formControlName="PanCard">
-        </mat-form-field><br>
+            <input matInput type="text" formControlName="PanCard" >
 
-        <mat-form-field appearance="outline">
-            <mat-label>MobileNo</mat-label>
-            <input matInput type="number" formControlName="MobileNo" placeholder="+918958100000">
-        </mat-form-field><br>
+            <mat-hint *ngIf="!ownerSignupform.get('PanCard')?.touched && ownerSignupform.get('PanCard')?.errors?.['required']" >
+                please enter your panCard
+            </mat-hint>
 
-        <mat-form-field appearance="outline">
-            <mat-label>AdharNo</mat-label>
-            <input matInput type="number" formControlName="AdharNo" placeholder="1234 5678 9123">
+            <mat-error *ngIf="ownerSignupform.get('PanCard')?.errors?.['required']" >
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="ownerSignupform.get('PanCard')?.errors?.['pattern']">
+                please follow this pancard pattern ABCD123E
+            </mat-error>
+
         </mat-form-field><br>
 
         <!-- <input type="radio" id="male" value="Male" formControlName="Gender">Male
@@ -34,27 +70,54 @@
     <input type="radio" id="male" value="Other" formControlName="Gender">Other -->
 
         <mat-radio-group formControlName="Gender">
+            <mat-hint>select your Gender</mat-hint>
             <mat-radio-button id="male" value="Male">Male </mat-radio-button>
             <mat-radio-button id="female" value="Female">Female</mat-radio-button>
-            <mat-radio-button id="other" value="Other">Other</mat-radio-button>
-        </mat-radio-group><br>
+            <mat-radio-button id="other" value="Other">Other</mat-radio-button><br>
+            
+        </mat-radio-group><br><br>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field class="matinpt" appearance="outline">
             <mat-label>Username</mat-label>
             <input matInput type="text" placeholder="Set Username" formControlName="Username">
-        </mat-form-field><br>
 
-        <mat-form-field appearance="outline">
+            <mat-hint *ngIf="!ownerSignupform.get('Username')?.touched">
+                please enter your username
+            </mat-hint>
+
+            <mat-error *ngIf="ownerSignupform.get('Username')?.errors?.['required']" >
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="ownerSignupform.get('Username')?.errors?.['pattern']" >
+                please match the pattern*
+            </mat-error>
+            
+            <mat-error *ngIf="ownerSignupform.get('Username')?.errors?.['whiteSpace']" >
+               should not allowed whitespaces
+            </mat-error>
+    
+        </mat-form-field><br><br>
+
+        <mat-form-field class="matinpt" appearance="outline">
             <mat-label>Password</mat-label>
             <input matInput type="text" placeholder="set Password" formControlName="Password">
-        </mat-form-field><br>
 
-        <mat-form-field appearance="outline">
-            <mat-label>confirmPassword</mat-label>
-            <input matInput type="text" placeholder="Confirm Password" formControlName="confirmPassword">
-        </mat-form-field><br>
+            <mat-hint *ngIf="!ownerSignupform.get('Password')?.touched">
+                please set your Password
+            </mat-hint>
 
-        <input type="checkbox"> Accept all term and condition <br>
-        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+            <mat-error *ngIf="ownerSignupform.get('Password')?.errors?.['required']" >
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="ownerSignupform.get('Password')?.errors?.['pattern']">
+                please match the pattern Pass@123
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <mat-checkbox>Accecpt all the terms and condition (TnC*)</mat-checkbox><br>
+        <button mat-raised-button color="primary" [disabled]="!ownerSignupform.valid" (click)="submit()">Submit</button>
     </form>
 </div>

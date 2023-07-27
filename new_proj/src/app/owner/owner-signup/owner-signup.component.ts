@@ -39,31 +39,29 @@ export class OwnerSignupComponent {
   signFormDeff() {
     this.ownerSignupform = this.formbuilder.group({
     
-      Fullname: ['',[Validators.required]],
-      Email: ['',Validators.required],
-      PanCard:['',Validators.required],
-      MobileNo:['',Validators.required],
-      AdharNo:['',Validators.required],
-      Gender:['',Validators.required],
-      Username:['',Validators.required],
-      Password:['',Validators.required],
-      confirmPassword:['',Validators.required],
+      Fullname: ['',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.whitespaceValidator]],
+      Email: ['',[Validators.required, Validators.email,this.whitespaceValidator ]],
+      PanCard:['',[Validators.required, Validators.pattern('[A-Z0-9]{9}')]],
+      // MobileNo:['',[Validators.required]],
+      // AdharNo:['',[Validators.required]],
+      Gender:['',[Validators.required,]],
+      Username:['',[Validators.required,Validators.pattern("^[a-z0-9_-]{6,15}$"),this.whitespaceValidator]],
+      Password:['',[Validators.required,Validators.pattern("^[A-Za-z0-9@]{8,12}$")]],
+      // confirmPassword:['',Validators.required],                   
     })
   }
-
-
+  ;
 
   submit(){
     let Formbody = {
       Fullname : this.ownerSignupform.value.Fullname,
       Email: this.ownerSignupform.value.Email,
       PanCard: this.ownerSignupform.value.PanCard,
-      MobileNo: this.ownerSignupform.value.MobileNo,
-      AdharNo: this.ownerSignupform.value.AdharNo,
+      // MobileNo: this.ownerSignupform.value.MobileNo,
       Gender: this.ownerSignupform.value.Gender,
       Username: this.ownerSignupform.value.Username,
       Password: this.ownerSignupform.value.Password,
-      confirmPassword: this.ownerSignupform.value.confirmPassword
+      // confirmPassword: this.ownerSignupform.value.confirmPassword
     }
     // let endpoint= 'owner'
     console.log('request',Formbody)
@@ -71,16 +69,20 @@ export class OwnerSignupComponent {
     this.dataservice.PostApiCall(this.journey,Formbody).subscribe(Response=>{
       console.log('responsive value',Response)
       this.postresponce =Response
-      
     })
-  
-
-
+    this.router.navigateByUrl('owner/ownerLoginSuccess')
     // if(this.postresponce?.id){
     //   console.log('postresponce value',this.postresponce)
     // }
     // this.formdata = this.ownerSignupform.value
     // console.log('ownersignformdata', this.formdata)  
   }
+  whitespaceValidator(name:any){
+    let data = name.value;
+    let newdata = data?.trim();
+    let isvaliddata = data.length != newdata.length;
+    return isvaliddata ? {whiteSpace:true }: null
+  }
+  
   
 }

@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule} from '@angular/material/checkbox'
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatIconModule,
     HttpClientModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCheckboxModule
+    
     
     
     
@@ -40,7 +43,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatIconModule,
     HttpClientModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCheckboxModule
     
     
 
