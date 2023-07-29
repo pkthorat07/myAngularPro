@@ -7,13 +7,15 @@ import { ShareModule } from '../sharemodule/share/share.module';
 import { OwnerSignupComponent } from './owner-signup/owner-signup.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { OwnerLoginSuccessComponent } from './owner-login-success/owner-login-success.component';
+import { OwnerHotelRegistrationComponent } from './owner-hotel-registration/owner-hotel-registration.component';
 
 
 @NgModule({
   declarations: [
     OwnerHomeComponent,
     OwnerSignupComponent,
-    OwnerLoginSuccessComponent
+    OwnerLoginSuccessComponent,
+    OwnerHotelRegistrationComponent
   ],
   imports: [
     CommonModule,

@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from  '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatCheckboxModule} from '@angular/material/checkbox'
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ToastrModule } from 'ngx-toastr';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonToggleModule} from '@angular/material/button-toggle'
 
 
 @NgModule({
@@ -25,13 +28,11 @@ import { MatCheckboxModule} from '@angular/material/checkbox'
     MatIconModule,
     HttpClientModule,
     MatRadioModule,
-    MatCheckboxModule
-    
-    
-    
-    
-    
+    MatCheckboxModule,
+    ToastrModule,
+    MatButtonToggleModule,
 
+    // BrowserAnimationsModule,
   ],
 
   exports: [
@@ -44,9 +45,10 @@ import { MatCheckboxModule} from '@angular/material/checkbox'
     MatIconModule,
     HttpClientModule,
     MatRadioModule,
-    MatCheckboxModule
-    
-    
+    MatCheckboxModule,
+    ToastrModule,
+    // BrowserAnimationsModule,
+    MatButtonToggleModule
 
   ]
 })

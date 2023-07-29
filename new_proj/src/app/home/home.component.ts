@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataserviceService } from '../service/dataservice.service';
+// import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ export class HomeComponent {
 
   constructor(
     private router : Router,
-    private dataService: DataserviceService
+    private dataService: DataserviceService,
+    // private tosterservic: ToastrService
   ){}
 
   journey(journey:string){
@@ -26,13 +28,11 @@ export class HomeComponent {
   else{
     this.dataService.journey='user'
     this.router.navigateByUrl('user/userHome')
-  // }
-
 
     // journey(){
     //   this.router.navigateByUrl('user')
     // }
+  }
+  }
   
-  }
-  }
 }

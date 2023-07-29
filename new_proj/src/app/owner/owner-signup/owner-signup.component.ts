@@ -27,7 +27,7 @@ export class OwnerSignupComponent {
   }
 
   backtologin(){
-    this.router.navigateByUrl('')
+    this.router.navigateByUrl('owner/ownerHome')
   }
 
   ngOnInit(){
@@ -70,10 +70,12 @@ export class OwnerSignupComponent {
       console.log('responsive value',Response)
       this.postresponce =Response
     })
-    this.router.navigateByUrl('owner/ownerLoginSuccess')
+
+
     // if(this.postresponce?.id){
-    //   console.log('postresponce value',this.postresponce)
-    // }
+      this.router.navigateByUrl('owner/ownerLoginSuccess')
+
+    
     // this.formdata = this.ownerSignupform.value
     // console.log('ownersignformdata', this.formdata)  
   }

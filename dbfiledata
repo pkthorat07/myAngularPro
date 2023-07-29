@@ -1,6 +1,19 @@
 {
   "owner": [
     {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "Fullname": "",
+      "id": 2
+    },
+    {
+      "Fullname": "PAVAN THORAT",
+      "id": 3
+    },
+    {
       "Fullname": "PAVAN THORAT",
       "Email": "pavan@test.in",
       "PanCard": "AWSPT5862D",
@@ -11,30 +24,39 @@
       "id": 4
     },
     {
-      "Fullname": "KIRAN KHANDARE",
-      "Email": "kiran@test.in",
-      "PanCard": "KNML6026D",
-      "Gender": "Male",
+      "Fullname": "KK",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
       "Username": "kk",
       "Password": "kk@123",
+      "confirmPassword": "",
       "id": 5
     },
     {
       "Fullname": "ANIKET KADAM",
-      "Email": "aniket@test.in",
-      "PanCard": "ANKY0143D",
-      "Gender": "Male",
-      "Username": "ankykad",
-      "Password": "Aniket@123",
+      "Email": "aniket",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
       "id": 6
     },
     {
       "Fullname": "jgj",
       "Email": "hh",
       "PanCard": "gg",
+      "MobileNo": "",
+      "AdharNo": "",
       "Gender": "",
       "Username": "",
       "Password": "",
+      "confirmPassword": "",
       "id": 7
     },
     {
@@ -134,74 +156,107 @@
       "id": 15
     },
     {
-      "Fullname": "SHUBHANGI DESHMUKH",
-      "Email": "shubhangi@test.in",
-      "PanCard": "SPDG1605",
-      "Gender": "Female",
-      "Username": "pdshubhu",
-      "Password": "Shubhangi@123",
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "MobileNo": "",
+      "AdharNo": "",
+      "Gender": "Other",
+      "Username": "",
+      "Password": "",
+      "confirmPassword": "",
       "id": 16
     },
     {
       "Fullname": "Mahesh nimkar",
       "Email": "mahesh@test.in",
       "PanCard": "MNNK2020D",
+      "MobileNo": 9028463590,
+      "AdharNo": 892136019925,
       "Gender": "Male",
       "Username": "mknimkar",
       "Password": "Mahesh@123",
+      "confirmPassword": "Mahesh@123",
       "id": 17
     },
     {
-      "Fullname": "Rohinee Bhuktare",
-      "Email": "rohinee@test.in",
-      "PanCard": "RUHI4316D",
-      "Gender": "Female",
-      "Username": "bkruhi",
-      "Password": "Ruhi@123",
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "Gender": "",
+      "Username": "",
+      "Password": "",
+      "id": 18
+    },
+    {
+      "Fullname": "",
+      "Email": "",
+      "PanCard": "",
+      "Gender": "",
+      "Username": "AA",
+      "Password": "",
       "id": 19
     },
     {
-      "Fullname": "KOMAL JADHAV",
-      "Email": "komal@test.in",
-      "PanCard": "KOML2012D",
-      "Gender": "Female",
-      "Username": "jdkomal",
-      "Password": "Komal@123",
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
+      "Gender": "Male",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
       "id": 20
     },
     {
-      "Fullname": "MAYUR AMBATWAR",
-      "Email": "mayur@test.in",
-      "PanCard": "CMBA1640D",
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
       "Gender": "Male",
-      "Username": "jumayu",
-      "Password": "Mayur@123",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
       "id": 21
     },
     {
-      "Fullname": "SHUBHAM PADADE",
-      "Email": "shubham@test.in",
-      "PanCard": "SHUB1392D",
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
       "Gender": "Male",
-      "Username": "jpshubhu",
-      "Password": "Shubham@123",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
       "id": 22
     },
     {
-      "Fullname": "MORE SUDARSHAN",
-      "Email": "more@test.in",
-      "PanCard": "SDMR6535D",
+      "Fullname": "KAUSHAL THORAT",
+      "Email": "kaushal@test.in",
+      "PanCard": "AWKT2216D",
       "Gender": "Male",
-      "Username": "moresudhir",
-      "Password": "Sudhir@123",
+      "Username": "kkthorat",
+      "Password": "Kaushal@123",
       "id": 23
+    },
+    {
+      "Fullname": "RAJ MALLURKAR",
+      "Email": "raj@test.in",
+      "PanCard": "RAJA2121D",
+      "Gender": "Male",
+      "Username": "rjprince",
+      "Password": "Raj@1234",
+      "id": 24
+    },
+    {
+      "Fullname": "RAJ mALLURKAR",
+      "Email": "raj@test.in",
+      "PanCard": "RAJA2151D",
+      "Gender": "Male",
+      "Username": "rjprince",
+      "Password": "Raj@1234",
+      "id": 25
     }
   ],
   "admin": [
     {
-      "id": 0,
+      "id": 1,
       "body": "some comment",
-      "postId": 0
+      "postId": 1
     }
   ],
   "user": {

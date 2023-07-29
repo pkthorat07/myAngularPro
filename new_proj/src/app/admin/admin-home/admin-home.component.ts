@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+// import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-home',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 export class AdminHomeComponent {
 
   constructor(
-    private router: Router
+    private router: Router,
+    // private tosterService : ToastrService,
   ){}
 
   signUpform(){
@@ -18,4 +20,6 @@ export class AdminHomeComponent {
   backtohome(){
     this.router.navigateByUrl('')
   }
+ 
+  
 }
