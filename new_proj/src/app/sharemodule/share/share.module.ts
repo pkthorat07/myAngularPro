@@ -28,11 +28,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle'
     HttpClientModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatButtonToggleModule,
-    
-    
-
-    
+    MatButtonToggleModule,  
   ],
 
   exports: [
