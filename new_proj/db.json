@@ -16,7 +16,7 @@
       "PanCard": "KNML6026D",
       "Gender": "Male",
       "Username": "kk",
-      "Password": "kk@123",
+      "Password": "Kiran@123",
       "id": 5
     },
     {
@@ -139,7 +139,7 @@
       "PanCard": "SPDG1605",
       "Gender": "Female",
       "Username": "pdshubhu",
-      "Password": "Shubhangi@123",
+      "Password": "Shubhngi@123",
       "id": 16
     },
     {
@@ -195,16 +195,159 @@
       "Username": "moresudhir",
       "Password": "Sudhir@123",
       "id": 23
-    }
-  ],
-  "admin": [
+    },
     {
-      "id": 0,
-      "body": "some comment",
-      "postId": 0
+      "id": 24
+    },
+    {
+      "id": 25
+    },
+    {
+      "id": 26
+    },
+    {
+      "Fullname": "SIDDHANT SALVE",
+      "Email": "sidhu@test.in",
+      "PanCard": "SSGS3215D",
+      "Gender": "Male",
+      "Username": "sgsidhu",
+      "Password": "Sidhu@123",
+      "id": 27
     }
   ],
-  "user": {
-    "name": "typicode"
-  }
+  "admin": [],
+  "user": [],
+  "hotelDetails": [
+    {
+      "hotelOwnerName": "john connet",
+      "hotelName": "Visawa Palace",
+      "hotelAddress": "Shivaji Nagar, Nanded",
+      "hotelContact": "02462-264810",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 260,
+      " ": "Pass@123",
+      "id": 1
+    },
+    {
+      "hotelOwnerName": "john connet",
+      "hotelName": "Ranwara",
+      "hotelAddress": "Shivaji Nagar, Nanded",
+      "hotelContact": "02462-264810",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 260,
+      "Password": "Pass@123",
+      "id": 2
+    },
+    {
+      "hotelOwnerName": "PAVAN THORAT",
+      "hotelName": "Visawa Palace",
+      "hotelAddress": "Shivaji Nagar, Nanded",
+      "hotelContact": "02462-264810",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 260,
+      "Password": "Pass@123",
+      "id": 3
+    },
+    {
+      "hotelOwnerName": "MAHESH NIMKAR",
+      "hotelName": "Hotel Akruti",
+      "hotelAddress": "Hanumangad Namaskar chowk, Nanded.",
+      "hotelContact": "02462-215651",
+      "hotelsType": "Veg and nonVeg",
+      "hotelRooms": 160,
+      "Password": "Mahesh@123",
+      "id": 4
+    },
+    {
+      "hotelOwnerName": "SUDARSHAN MORE",
+      "hotelName": "Hotel Midland Nanded",
+      "hotelAddress": ", Nanded.",
+      "hotelContact": "02462-221436",
+      "hotelsType": "Non-Veg",
+      "hotelRooms": 140,
+      "Password": "Sudhir@123",
+      "id": 5
+    },
+    {
+      "hotelOwnerName": "MAYUR AMBATWAR",
+      "hotelName": "Hotel City Synphony",
+      "hotelAddress": "Maharana Pratap Chowk, Nanded.",
+      "hotelContact": "02462-293256",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 120,
+      "Password": "Mayur@123",
+      "id": 6
+    },
+    {
+      "hotelOwnerName": "SHUBHANGI DESHMUKH",
+      "hotelName": "Hotel Padmawati Grand",
+      "hotelAddress": "Maharana Pratap Chowk, Nanded.",
+      "hotelContact": "02462-293256",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 120,
+      "Password": "Shubhngi@123",
+      "id": 7
+    },
+    {
+      "hotelOwnerName": "ROHINI BHUKTARE",
+      "hotelName": "VITS Bharat Nanded",
+      "hotelAddress": "Airport Sangwi , Nanded.",
+      "hotelContact": "02462-293256",
+      "hotelsType": "Veg and nonVeg",
+      "hotelRooms": 210,
+      "Password": "Rohini@123",
+      "id": 8
+    },
+    {
+      "hotelOwnerName": "KOMAL JADHAV",
+      "hotelName": "Hotel Manju Palace",
+      "hotelAddress": "Cidko-Hadko, Nanded",
+      "hotelContact": "02462-262188",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 240,
+      "Password": "Komal@123",
+      "id": 9
+    },
+    {
+      "hotelOwnerName": "KIRAN KHANDARE",
+      "hotelName": "Atithi Lodging and Restro",
+      "hotelAddress": "Phule Market, Nanded",
+      "hotelContact": "02462-262154",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 102,
+      "Password": "Kiran@123",
+      "id": 10
+    },
+    {
+      "hotelOwnerName": "ANIKET KADAM",
+      "hotelName": "Hotel Pooja Garden",
+      "hotelAddress": "Vishnupuri, Nanded",
+      "hotelContact": "02462-324845",
+      "hotelsType": "Veg and nonVeg",
+      "hotelRooms": 102,
+      "Password": "Aniket@123",
+      "id": 11
+    },
+    {
+      "hotelOwnerName": "ANIKET KADAM",
+      "hotelName": "Hotel Pooja Garden",
+      "hotelAddress": "Vishnupuri, Nanded",
+      "hotelContact": "02462-324845",
+      "hotelsType": "Veg and nonVeg",
+      "hotelRooms": 102,
+      "Password": "Aniket@123",
+      "id": 12
+    },
+    {
+      "hotelOwnerName": "SHUBHAN PADADE",
+      "hotelName": "Carnival Restro",
+      "hotelAddress": "chatrapati chowk, Nanded",
+      "hotelContact": "02462-354455",
+      "hotelsType": "Non-Veg",
+      "hotelRooms": 150,
+      "Password": "Shubham@123",
+      "id": 13
+    }
+  ],
+  "hotelBookings": []
 }
