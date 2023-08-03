@@ -1,36 +1,157 @@
 <p>owner-hotel-registration works!</p>
+<button mat-raised-button color="accent" (click)="backtohome()">Back</button><br><br>
+
 <div>
     <div class="matformfield">
-        <form>
+        <form [formGroup]="ownerHotelRegisterForm">
 
             <mat-form-field class="matinpt" appearance="outline">
-                <mat-label>Hotel owner fullname</mat-label>
-                <input  matInput type="text" placeholder=" ex John Conner">
+                <mat-label>hotelOwnerName</mat-label>
+                <input  matInput type="text" formControlName="hotelOwnerName" placeholder="ex John Conner">
+
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('hotelOwnerName')?.touched">
+                    please enter your fullname
+                </mat-hint>
+    
+                <mat-error
+                    *ngIf="ownerHotelRegisterForm.get('hotelOwnerName')?.errors?.['whiteSpace'] && !ownerHotelRegisterForm.get('hotelOwnerName')?.errors?.['minlength'] ">
+                    name should not allowd whitespace
+                </mat-error>
+    
+                <mat-error
+                    *ngIf="ownerHotelRegisterForm.get('hotelOwnerName')?.errors?.['minlength'] && !ownerHotelRegisterForm.get('hotelOwnerName')?.errors?.['pattern'] ">
+                    Minimum 5 charecters
+                </mat-error>
+    
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelOwnerName')?.errors?.['pattern']">
+                    Only alphabats
+                </mat-error>
+                
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelOwnerName')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+            </mat-form-field><br><br>
+
+            <mat-form-field class="matinpt"  appearance="outline">
+                <mat-label>hotelName</mat-label>
+                <input  matInput type="text" formControlName="hotelName" placeholder="ex abc hotel">
+
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('hotelName')?.touched">
+                    please enter your fullname
+                </mat-hint>
+    
+                <mat-error
+                    *ngIf="ownerHotelRegisterForm.get('hotelName')?.errors?.['whiteSpace'] && !ownerHotelRegisterForm.get('hotelName')?.errors?.['minlength'] ">
+                    name should not allowd whitespace
+                </mat-error>
+    
+                <mat-error
+                    *ngIf="ownerHotelRegisterForm.get('hotelName')?.errors?.['minlength'] && !ownerHotelRegisterForm.get('hotelName')?.errors?.['pattern'] ">
+                    Minimum 5 charecters
+                </mat-error>
+    
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelName')?.errors?.['pattern']">
+                    Only alphabats
+                </mat-error>
+                
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelName')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
             </mat-form-field><br><br>
 
             <mat-form-field class="matinpt" appearance="outline">
-                <mat-label>Hotel Name</mat-label>
-                <input  matInput type="text" placeholder="ex abc hotel">
+                <mat-label>HotelAddress</mat-label>
+                <input  matInput type="text" formControlName="hotelAddress" placeholder="ex location">
+
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('hotelAddress')?.touched">
+                    Enter your Hotel Adress
+                </mat-hint>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelAddress')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+
             </mat-form-field><br><br>
 
             <mat-form-field class="matinpt" appearance="outline">
-                <mat-label>Hotel Address</mat-label>
-                <input  matInput type="text" placeholder="ex location">
+                <mat-label>HotelsContact</mat-label>
+                <input  matInput type="text" formControlName="hotelContact"   placeholder="02462-452410">
+
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('hotelContact')?.touched">
+                    Enter your Contact details
+                </mat-hint>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelContact')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelContact')?.errors?.['pattern']">
+                     please match the pattern
+                </mat-error>
+
             </mat-form-field><br><br>
 
-            <mat-form-field class="matinpt" appearance="outline">
-                <mat-label>Hotels Contact</mat-label>
-                <input  matInput type="text" placeholder="02462">
+            
+            <mat-hint *ngIf="!ownerHotelRegisterForm.get('hotelRooms')?.touched">
+                <h4>Hotels Type</h4> 
+            </mat-hint>
+
+            <mat-button-toggle-group  formControlName="hotelsType" name="Horelsssss">
+                <mat-label></mat-label>&nbsp;
+                <mat-button-toggle id="veg" value="Pure-Veg">Pure Veg</mat-button-toggle>
+                <mat-button-toggle id="nonVeg" value="Non-Veg">Non-Veg</mat-button-toggle>
+                <mat-button-toggle id="nonVeg" value="Veg and nonVeg">Veg&Non-Veg</mat-button-toggle>
+            </mat-button-toggle-group><br><br>
+
+            <section>
+                <p>Your Hotel Type is : {{ownerHotelRegisterForm.value.hotelsType}}</p>
+            </section><br><br> 
+
+            <mat-form-field class="matinpt"  appearance="outline">
+                <mat-label>hotelRooms</mat-label>
+                <input  matInput type="number" formControlName="hotelRooms">
+
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('hotelRooms')?.touched">
+                    Enter your Available rooms
+                </mat-hint>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelRooms')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('hotelRooms')?.errors?.['pattern']">
+                     please match the pattern ex. 100
+                </mat-error>
+
+
             </mat-form-field><br><br>
 
-            <h4>Hotels Type</h4>
-            <mat-button-toggle-group name="ingredients">
-                <mat-label>Hotels Type</mat-label>&nbsp;
-                <mat-button-toggle value="veg">Pure Veg </mat-button-toggle>
-                <mat-button-toggle value="nonVeg">Non-Veg</mat-button-toggle>
-                <mat-button-toggle value="veg&non">Veg&Non-Veg</mat-button-toggle>
-              </mat-button-toggle-group><br><br>
+            <mat-form-field class="matinpt"  appearance="outline">
+                <mat-label>Password</mat-label>
+                <input  matInput type="text" formControlName="Password">
+
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('Password')?.touched">
+                    please set your Password
+                </mat-hint>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('Password')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+
+                <mat-error *ngIf="ownerHotelRegisterForm.get('Password')?.errors?.['pattern']">
+                    please match the pattern Pass@123
+                </mat-error>
+
+            </mat-form-field><br><br>
+
+              <button mat-raised-button (click)="submithotelDetails()" color="primary"  [disabled]="!ownerHotelRegisterForm.valid">Submit</button> 
 
         </form>
-    </div>
+        
+    </div> 
+
 </div>
+
+<!-- "
+    [disabled]="!ownerHotelRegisterForm.valid -->
+

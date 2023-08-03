@@ -9,9 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ToastrModule } from 'ngx-toastr';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from '@angular/material/button-toggle'
+
 
 
 @NgModule({
@@ -29,10 +28,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle'
     HttpClientModule,
     MatRadioModule,
     MatCheckboxModule,
-    ToastrModule,
     MatButtonToggleModule,
+    
+    
 
-    // BrowserAnimationsModule,
+    
   ],
 
   exports: [
@@ -46,8 +46,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle'
     HttpClientModule,
     MatRadioModule,
     MatCheckboxModule,
-    ToastrModule,
-    // BrowserAnimationsModule,
+  
     MatButtonToggleModule
 
   ]

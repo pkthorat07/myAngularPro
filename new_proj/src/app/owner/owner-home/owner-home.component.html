@@ -1,19 +1,73 @@
 <br>
-<button class="" (click)="backtohome()" mat-raised-button color="accent">Back</button><br><br>
+<button  (click)="backtohome()" mat-raised-button color="accent">Back</button><br><br>
 
 <div class="loginField">
-<form [formGroup]="ownerLogInform">
-<mat-form-field appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput  type="text" placeholder="@Username" formControlName="Username">
-</mat-form-field><br>
-<mat-form-field appearance="outline">
-    <mat-label>Password</mat-label>
-    <input matInput type="text"  placeholder="Pass@123" formControlName="Password">
-</mat-form-field><br>
-<mat-hint>Do not have account please signup</mat-hint><br><br>
-<button mat-raised-button color="primary" (click)="loginForm()">LogIn</button>&nbsp;
-<button mat-raised-button color="primary" (click)="ownerSignUpform()">SignUp</button>
-</form>
+    <form [formGroup]="ownerLogInform" *ngIf="!showForgetPasswordForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" placeholder="@Username" formControlName="Username">
 
+            <mat-hint *ngIf="!ownerLogInform.get('Username')?.touched">
+                Enter your username
+            </mat-hint>
+
+            <mat-error
+                *ngIf="ownerLogInform.get('Username')?.errors?.['whiteSpace'] && !ownerLogInform.get('Username')?.errors?.['minlength'] ">
+                name should not allowd whitespace
+            </mat-error>
+
+            <mat-error
+                *ngIf="ownerLogInform.get('Username')?.errors?.['minlength'] && !ownerLogInform.get('Username')?.errors?.['pattern'] ">
+                Minimum 5 charecters
+            </mat-error>
+
+            <mat-error *ngIf="ownerLogInform.get('Username')?.errors?.['pattern']">
+                Only alphabats
+            </mat-error>
+            <mat-error *ngIf="ownerLogInform.get('Username')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+        </mat-form-field><br><br>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="text" placeholder="Pass@123" formControlName="Password">
+
+            <mat-hint *ngIf="!ownerLogInform.get('Password')?.touched">
+                Enter your Password
+            </mat-hint>
+
+            <mat-error *ngIf="ownerLogInform.get('Password')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="ownerLogInform.get('Password')?.errors?.['pattern']">
+                please match the pattern Pass@123
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <button mat-raised-button color="primary" (click)="loginForm()">LogIn</button>&nbsp;
+        <button mat-raised-button color="primary" (click)="ownerSignUpform()">SignUp</button><br><br>
+        <button mat-raised-button color="primary" *ngIf="forgetPassword" (click)="forgetPassword()">Forgot Password?</button><br>
+
+    </form><br>
+
+    
+<form  [formGroup]="forgetPasswordForm" *ngIf="showForgetPasswordForm">
+
+    <mat-form-field >
+        <mat-label>New Password</mat-label>
+        <input matInput formControlName="newPassword">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword">
+    </mat-form-field>
+
+    <div>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+    </div>
+</form>
 </div>

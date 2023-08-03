@@ -2,8 +2,34 @@
 <button mat-raised-button color="accent" (click)="backtohome()" >Back</button><br><br>
 
 <mat-hint>Register your new Hotel here... </mat-hint>
-<button mat-raised-button color="accent" (click)="backtohomenewHotelRegst()">Register</button>
+<button mat-raised-button color="accent" (click)="backtohomenewHotelRegst()">Register</button><br><br>
+<mat-hint>your hotels</mat-hint>
+<button mat-raised-button color="accent" (click)="myhotelDeltails()">myhotelDeltails</button>
 
 
+
+<div *ngIf="showTable">
+    <table  >
+        <tr >
+            <th *ngFor="let heading of tableheading">{{heading}}</th>    
+        </tr>
+        <tr *ngFor="let hoteldata of userhotelDetails">
+            <td> {{hoteldata.hotelOwnerName}} </td>
+            <td> {{hoteldata.hotelName}} </td>
+            <td> {{hoteldata.hotelAddress}} </td>
+            <td> {{hoteldata.hotelContact}} </td>
+            <td> {{hoteldata.hotelsType}} </td>
+            <td> {{hoteldata.hotelRooms}} </td>
+            <td> {{hoteldata.Password}} </td>
+            <td><mat-icon> Delete</mat-icon> </td>
+            <td> <mat-icon> Edit</mat-icon></td>
+
+
+
+
+        </tr>
+        
+    </table>
+</div>
 
 

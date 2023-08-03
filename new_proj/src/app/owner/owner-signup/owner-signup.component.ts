@@ -52,7 +52,7 @@ export class OwnerSignupComponent {
   }
   ;
 
-  submit(){
+  async submit(){
     let Formbody = {
       Fullname : this.ownerSignupform.value.Fullname,
       Email: this.ownerSignupform.value.Email,
@@ -66,13 +66,16 @@ export class OwnerSignupComponent {
     // let endpoint= 'owner'
     console.log('request',Formbody)
 
-    this.dataservice.PostApiCall(this.journey,Formbody).subscribe(Response=>{
-      console.log('responsive value',Response)
-      this.postresponce =Response
-    })
+    // this.dataservice.PostApiCall(this.journey,Formbody).subscribe(Response=>{
+    //   console.log('responsive value',Response)
+    //   this.postresponce =Response
+    // })
 
 
+    this.postresponce = await this.dataservice.PostApiCall(this.journey,Formbody ).toPromise()
     // if(this.postresponce?.id){
+        console.log('ownersignformdata', this.postresponce)  
+
       this.router.navigateByUrl('owner/ownerLoginSuccess')
 
     
