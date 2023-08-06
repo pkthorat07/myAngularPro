@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-// import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-admin-home',
@@ -11,7 +11,7 @@ export class AdminHomeComponent {
 
   constructor(
     private router: Router,
-    // private tosterService : ToastrService,
+    
   ){}
 
   signUpform(){

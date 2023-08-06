@@ -4,32 +4,28 @@
 <mat-hint>Register your new Hotel here... </mat-hint>
 <button mat-raised-button color="accent" (click)="backtohomenewHotelRegst()">Register</button><br><br>
 <mat-hint>your hotels</mat-hint>
-<button mat-raised-button color="accent" (click)="myhotelDeltails()">myhotelDeltails</button>
+<button mat-raised-button color="accent" (click)="myhotelDeltails()" >myhotelDeltails</button>
 
 
-
-<div *ngIf="showTable">
-    <table  >
-        <tr >
-            <th *ngFor="let heading of tableheading">{{heading}}</th>    
+<div *ngIf="showtable">
+    <table *ngIf="userHotelDetails.length > 0 showtable">
+        <tr>
+            <th *ngFor="let tableHed of tableheading">{{tableHed}}</th>
         </tr>
-        <tr *ngFor="let hoteldata of userhotelDetails">
-            <td> {{hoteldata.hotelOwnerName}} </td>
-            <td> {{hoteldata.hotelName}} </td>
-            <td> {{hoteldata.hotelAddress}} </td>
-            <td> {{hoteldata.hotelContact}} </td>
-            <td> {{hoteldata.hotelsType}} </td>
-            <td> {{hoteldata.hotelRooms}} </td>
-            <td> {{hoteldata.Password}} </td>
-            <td><mat-icon> Delete</mat-icon> </td>
-            <td> <mat-icon> Edit</mat-icon></td>
-
-
-
-
+        <tr *ngFor="let tabledata of userHotelDetails">
+            <td> {{tabledata.hotelOwnerName}} </td> 
+            <td> {{tabledata.hotelName}} </td>  
+            <td> {{tabledata.hotelAddress}} </td>  
+            <td> {{tabledata.hotelContact}} </td>  
+            <td> {{tabledata.hotelsType}} </td>  
+            <td> {{tabledata.hotelRooms}} </td>  
+            <td><mat-icon>edit</mat-icon></td>  
+            <td><mat-icon (click)="Delete(tabledata.id)">delete</mat-icon></td>  
+ 
         </tr>
-        
     </table>
 </div>
+
+
 
 

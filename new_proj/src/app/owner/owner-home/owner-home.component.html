@@ -2,7 +2,7 @@
 <button  (click)="backtohome()" mat-raised-button color="accent">Back</button><br><br>
 
 <div class="loginField">
-    <form [formGroup]="ownerLogInform" *ngIf="!showForgetPasswordForm">
+    <form [formGroup]="ownerLogInform" >
         <mat-form-field appearance="outline">
             <mat-label>Username</mat-label>
             <input matInput type="text" placeholder="@Username" formControlName="Username">
@@ -49,25 +49,6 @@
 
         <button mat-raised-button color="primary" (click)="loginForm()">LogIn</button>&nbsp;
         <button mat-raised-button color="primary" (click)="ownerSignUpform()">SignUp</button><br><br>
-        <button mat-raised-button color="primary" *ngIf="forgetPassword" (click)="forgetPassword()">Forgot Password?</button><br>
+        <button mat-raised-button color="primary" >Forgot Password?</button><br>
 
-    </form><br>
-
-    
-<form  [formGroup]="forgetPasswordForm" *ngIf="showForgetPasswordForm">
-
-    <mat-form-field >
-        <mat-label>New Password</mat-label>
-        <input matInput formControlName="newPassword">
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-        <mat-label>Confirm Password</mat-label>
-        <input matInput type="password" formControlName="confirmPassword">
-    </mat-form-field>
-
-    <div>
-        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
-    </div>
-</form>
-</div>
+    </form><br>    

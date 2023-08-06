@@ -10,18 +10,23 @@ import { DataserviceService } from 'src/app/service/dataservice.service';
 export class OwnerLoginSuccessComponent {
   hotelDetails:any;
   Username! : string;
-  userhotelDetails: any []=[]
-  showTable: any;
-  tableheading: string[] =['hotelOwnerName','hotelName','hotelAddress','hotelContact','hotelsType','hotelRooms','Password','Delete','Edit']
+  tableheading: string[] =['hotelOwnerName','hotelName','hotelAddress','hotelContact','hotelsType','hotelRooms','Edit','Delete']
   Useername: any;
-  bchotelDetails: any;
-
+  userHotelDetails:any[] = [];
+  showtable:boolean=false;
+  deletOwenerdata:any;
 
   constructor (
     private router : Router,
     private dataservice: DataserviceService
   ){}
 
+  ngOnInit(){
+    console.log('oninit calling...')
+    this.Useername = this.dataservice.userName;
+    // console.log('this.Username)',this.Useername);
+    
+  }
 
   backtohome(){
     this.router.navigateByUrl('')
@@ -29,33 +34,39 @@ export class OwnerLoginSuccessComponent {
   backtohomenewHotelRegst(){
     this.router.navigateByUrl('owner/ownerhotelRegister')
   }
-  ngOnInit(){
-    console.log('oninit calling...',this.Username)
-    this.Useername = this.dataservice.userName;
-    console.log('this.Username)',this.Username);
-    
-  }
 
   async myhotelDeltails(){
-    this.showTable = ! this.showTable
-    let endpoint='hotelDetails';
-    this.bchotelDetails = await this.dataservice.getApiCall(endpoint).toPromise()
-    console.log('hotelsDetails',this.bchotelDetails);
-    if (this.bchotelDetails){
-      this.hotelDetailsbyOwner();
+    this.showtable = !this.showtable;
+    let endpoint = 'hotelDetails'
+    this.hotelDetails= await this.dataservice.getApiCall(endpoint).toPromise()
+    console.log("hotelDetails",this.hotelDetails);
+    this.userHotelDetails = []
+
+    if (this.hotelDetails){
+      this.hotelDetailsByOwner();  
+    if(this.userHotelDetails.length > 0){
+
+    }else{
+      alert('no owner data availabele')
     }
-
-
   }
-  hotelDetailsbyOwner(){
-    this.userhotelDetails=[]
-    this.bchotelDetails.forEach((element:any )=>{
-      if (element.hotelOwnerName===this.Useername){
-        this.userhotelDetails.push(element);
+  }
+
+  hotelDetailsByOwner(){
+    this.hotelDetails.forEach((element:any)=>{
+      if(element.hotelOwnerName === this.Useername){
+        this.userHotelDetails.push(element)
       }
-    });
+  })
+  console.log('this.userHotelDetails',this.userHotelDetails);
+
   }
   
+  async Delete(id:number){
+  await this.dataservice.deleteApiCall('hotelDetails', id).toPromise()
+  this.showtable = ! this.showtable;
+  this.myhotelDeltails()
+  }
 
 
 }

@@ -51,10 +51,6 @@ export class OwnerHotelRegistrationComponent {
     return isvaliddata ? {whiteSpace:true }: null
   }
 
-
-
-
-
   async submithotelDetails(){
     console.log("form value",this.ownerHotelRegisterForm.value)
     let endpoint = 'hotelDetails'
@@ -71,7 +67,10 @@ export class OwnerHotelRegistrationComponent {
     //   console.log('respo',respo)
     // })
     this.postrespoData= await this.dataservice.PostApiCall(endpoint,requestData).toPromise()
-    alert : 'successfull'
+
+    this.router.navigateByUrl('owner/ownerLoginSuccess');
+
+
   }
 
   backtohome(){

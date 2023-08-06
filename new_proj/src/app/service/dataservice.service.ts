@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +10,10 @@ export class DataserviceService {
   url='http://localhost:3000/';
   userName!:string;
   forgotPassword!:boolean;
+  ownerhotelData: any;
 
   constructor(
     private httpclient: HttpClient,
-    private toster: ToastrService
   ){}
 
   whitespaceValidator(name:any){
@@ -36,6 +36,11 @@ export class DataserviceService {
   patchApiCall(endpoint:string,requestbody:any,id:number){
     let url = this.url + endpoint + '/' + id;
     return this.httpclient.patch(url,requestbody)
+  }
+
+  deleteApiCall(endpoint:string, id:number){
+    let url = this.url + endpoint + '/' + id
+    return this.httpclient.delete(url)
   }
   
 }
