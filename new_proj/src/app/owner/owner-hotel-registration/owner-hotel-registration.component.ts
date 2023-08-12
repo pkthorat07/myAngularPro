@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder,FormGroup, FormsModule, ReactiveFormsModule,Validators } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { Router } from '@angular/router';
+import { identity } from 'rxjs';
 import { DataserviceService } from 'src/app/service/dataservice.service';
 import { __values } from 'tslib';
 
@@ -15,6 +16,8 @@ export class OwnerHotelRegistrationComponent {
   fontStyle?: string;
   journey!: string;
   postrespoData:any;
+  editId: any;
+  dataById: any;
 
   constructor(
     public router: Router,
@@ -25,21 +28,24 @@ export class OwnerHotelRegistrationComponent {
   ) {}
 
   ngOnInit(){
+    this.editId = this.dataservice.id;
+    this.dataById = this.dataservice.dataById;
     this.regiFormDeff()
     this.journey= this.dataservice.journey;
     console.log('journy',this.journey);
 
   }
+ 
 
   regiFormDeff(){
     this.ownerHotelRegisterForm = this.formBuilder.group({
-      hotelOwnerName:['',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.whitespaceValidator]],
-      hotelName:['',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.whitespaceValidator]],
-      hotelAddress:['',[Validators.required]],
-      hotelContact:['',[Validators.required, Validators.pattern('^[0-9-]*$')]],
-      hotelsType:[''],
-      hotelRooms:['',[Validators.required,Validators.pattern('^[0-9]*$')]],
-      Password:['',[Validators.required,Validators.pattern("^[A-Za-z0-9@]{8,12}$")]]
+      hotelOwnerName:[this.dataById? this.dataById.hotelOwnerName:'',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.whitespaceValidator]],
+      hotelName:[this.dataById? this.dataById.hotelName:'',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.whitespaceValidator]],
+      hotelAddress:[this.dataById? this.dataById.hotelAddress:'',[Validators.required]],
+      hotelContact:[this.dataById? this.dataById.hotelContact:'',[Validators.required, Validators.pattern('^[0-9-]*$')]],
+      hotelsType:[this.dataById? this.dataById.hotelsType:''],
+      hotelRooms:[this.dataById? this.dataById.hotelRooms:'',[Validators.required,Validators.pattern('^[0-9]*$')]],
+      Password:[this.dataById? this.dataById.Password:'',[Validators.required,Validators.pattern("^[A-Za-z0-9@]{8,12}$")]]
 
     })
 
@@ -47,7 +53,7 @@ export class OwnerHotelRegistrationComponent {
   whitespaceValidator(name:any){
     let data = name.value;
     let newdata = data?.trim();
-    let isvaliddata = data.length != newdata.length;
+    let isvaliddata = data?.length  != newdata?.length;
     return isvaliddata ? {whiteSpace:true }: null
   }
 
@@ -66,16 +72,26 @@ export class OwnerHotelRegistrationComponent {
     // this.dataservice.PostApiCall(endpoint,requestData).subscribe(respo=>{
     //   console.log('respo',respo)
     // })
-    this.postrespoData= await this.dataservice.PostApiCall(endpoint,requestData).toPromise()
+    if(this.editId){
+      this.dataservice.patchApiCall(endpoint, requestData, this.editId).toPromise()
+    }
+    else{
+      this.postrespoData= await this.dataservice.PostApiCall(endpoint,requestData).toPromise()
+
+    }
 
     this.router.navigateByUrl('owner/ownerLoginSuccess');
 
 
   }
 
-  backtohome(){
-    this.router.navigateByUrl('')
+  backt(){
+    this.router.navigateByUrl('owner/ownerLoginSuccess')
   }
+
+ 
+
+ 
   
 
 }

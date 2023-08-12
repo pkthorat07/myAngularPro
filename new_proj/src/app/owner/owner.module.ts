@@ -8,6 +8,7 @@ import { OwnerSignupComponent } from './owner-signup/owner-signup.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { OwnerLoginSuccessComponent } from './owner-login-success/owner-login-success.component';
 import { OwnerHotelRegistrationComponent } from './owner-hotel-registration/owner-hotel-registration.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { OwnerHotelRegistrationComponent } from './owner-hotel-registration/owne
     OwnerHomeComponent,
     OwnerSignupComponent,
     OwnerLoginSuccessComponent,
-    OwnerHotelRegistrationComponent
+    OwnerHotelRegistrationComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { DataserviceService } from 'src/app/service/dataservice.service';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-owner-login-success',
@@ -15,16 +17,19 @@ export class OwnerLoginSuccessComponent {
   userHotelDetails:any[] = [];
   showtable:boolean=false;
   deletOwenerdata:any;
+  dataById:any;
+  
 
   constructor (
     private router : Router,
-    private dataservice: DataserviceService
+    private dataservice: DataserviceService,
+    private dialog: MatDialog,
   ){}
 
   ngOnInit(){
     console.log('oninit calling...')
     this.Useername = this.dataservice.userName;
-    // console.log('this.Username)',this.Useername);
+    console.log('this.Username)',this.Useername);
     
   }
 
@@ -32,7 +37,10 @@ export class OwnerLoginSuccessComponent {
     this.router.navigateByUrl('')
   }
   backtohomenewHotelRegst(){
+    this.dataservice.dataById = {};
+    this.dataservice.id = '';
     this.router.navigateByUrl('owner/ownerhotelRegister')
+    
   }
 
   async myhotelDeltails(){
@@ -47,7 +55,10 @@ export class OwnerLoginSuccessComponent {
     if(this.userHotelDetails.length > 0){
 
     }else{
-      alert('no owner data availabele')
+      this.dataservice.worningToster('can not find any register hotel','No data found',{
+        setTimeout:1000,
+        positionClass: 'toast-top-right'
+      })
     }
   }
   }
@@ -62,11 +73,34 @@ export class OwnerLoginSuccessComponent {
 
   }
   
-  async Delete(id:number){
-  await this.dataservice.deleteApiCall('hotelDetails', id).toPromise()
-  this.showtable = ! this.showtable;
+   Delete(id:number){
+    const dialogRef= this.dialog.open(DialogComponent,{
+      width: '250px'
+    })
+  
+  dialogRef.afterClosed().subscribe((res:any)=>{
+    console.log('res',res)
+    if(res === 'YES'){
+    this.deletRecord(id)
+    this.showtable = ! this.showtable;
   this.myhotelDeltails()
   }
+  });
+}
+  async deletRecord(id:number){
+  await this.dataservice.deleteApiCall('hotelDetails', id).toPromise()
+  
+  }
+
+  async editUpdate(id:number){
+    this.dataservice.id = id;
+    this.dataById = await this.dataservice.getApiCall('hotelDetails', id).toPromise()
+    this.dataservice.dataById = this.dataById
+    this.router.navigateByUrl('owner/ownerhotelRegister')
+  }
+
+  
+
 
 
 }

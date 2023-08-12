@@ -1,0 +1,87 @@
+// <!-- <div *ngIf="showTable">
+//     <table  >
+//         <tr >
+//             <th *ngFor="let heading of tableheading">{{heading}}</th>    
+//         </tr>
+        
+//     </table>
+// </div> -->
+
+// ---------------------------------------------------------------------------------
+
+// // async myhotelDeltails(){
+//     //   this.showTable = ! this.showTable 
+//     //   let endpoint='hotelDetails';
+//     //   this.bchotelDetails = await this.dataservice.getApiCall(endpoint).toPromise()
+//     //   console.log('hotelsDetails',this.bchotelDetails);
+//     //   if (this.bchotelDetails){
+//     //     this.hotelDetailsbyOwner();
+//     //   }
+  
+  
+//     // }
+//     hotelDetailsbyOwner(){
+//     //   this.userhotelDetails=[]
+//     //   this.bchotelDetails.forEach((element:any )=>{
+//     //     if (element.hotelOwnerName===this.Useername){
+//     //       this.userhotelDetails.push(element);
+//         // }
+      
+     
+//     //   });
+//     //   console.log('thisuserdata',this.hotelDetailsbyOwner)
+//     }
+//     ---------------------------------------------------------------------------------
+//     forgetPassword(){}
+//   // forgetPassword() {
+//   //   this.showForgetPasswordForm = !this.showForgetPasswordForm;
+//   //   this.forgoPasswordFormDetails();
+//   // }
+
+//   // submit() {
+//   //   this.updatePassword();
+//   //   this.showForgetPasswordForm = !this.showForgetPasswordForm;
+//   //   this.forgotPassword = false;
+//   // }
+
+//   // async updatePassword() {
+//   //   var user: any;
+//   //   this.ownerData.forEach((data: any) => {
+//   //     if (data.Username === this.userName) {
+//   //       user = data;
+//   //     }
+//   //   })
+//   //   if (user) {
+//   //     let request = {
+//   //       Password: this.forgetPasswordForm.value.newPassword
+//   //     }
+//   //     // this.commonApiCallService.patchApiCall(this.endPoint,request,user.id ).subscribe((respo:any)=>{
+//   //     //   console.log(respo);
+//   //     // })
+//   //     await this.dataservice.patchApiCall(this.endpoint, request, user.id).toPromise()
+//   //   }
+//   //   else {
+//   //     alert('user is not exist')
+      
+//   //   }
+
+//   // }
+// <!--   
+//   <form  [formGroup]="forgetPasswordForm" *ngIf="showForgetPasswordForm">
+  
+//       <mat-form-field >
+//           <mat-label>New Password</mat-label>
+//           <input matInput formControlName="newPassword">
+//       </mat-form-field>
+//       <br>
+//       <mat-form-field>
+//           <mat-label>Confirm Password</mat-label>
+//           <input matInput type="password" formControlName="confirmPassword">
+//       </mat-form-field>
+  
+//       <div>
+//           <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+//       </div>
+//   </form>
+//   </div>
+//     //  -->

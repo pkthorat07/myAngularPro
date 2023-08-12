@@ -9,7 +9,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {MatButtonToggleModule} from '@angular/material/button-toggle'
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { ToastrModule } from 'ngx-toastr';
+import {MatTableModule} from '@angular/material/table';
+import { MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -28,7 +32,11 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle'
     HttpClientModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatButtonToggleModule,  
+    MatButtonToggleModule,
+    MatTableModule,  
+    MatDialogModule,
+    
+    ToastrModule.forRoot(),
   ],
 
   exports: [
@@ -42,9 +50,13 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle'
     HttpClientModule,
     MatRadioModule,
     MatCheckboxModule,
-  
-    MatButtonToggleModule
+    MatTableModule,
+    MatButtonToggleModule,
+    MatDialogModule,
+    
+    
 
   ]
 })
+
 export class ShareModule { }

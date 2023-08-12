@@ -3,7 +3,7 @@
 
 <div class="loginField">
     <form [formGroup]="ownerLogInform" >
-        <mat-form-field appearance="outline">
+        <mat-form-field class="inputbox" appearance="outline">
             <mat-label>Username</mat-label>
             <input matInput type="text" placeholder="@Username" formControlName="Username">
 
@@ -29,9 +29,11 @@
             </mat-error>
         </mat-form-field><br><br>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field class="inputbox" appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput type="text" placeholder="Pass@123" formControlName="Password">
+            <input matInput [type]="showPass? 'text': 'password'" placeholder="Pass@123" formControlName="Password">
+            <mat-icon matSuffix (click)="vsiblePass()" *ngIf="!showPass">visibility_off</mat-icon>
+            <mat-icon matSuffix (click)="vsiblePass()" *ngIf="showPass">visibility</mat-icon>
 
             <mat-hint *ngIf="!ownerLogInform.get('Password')?.touched">
                 Enter your Password

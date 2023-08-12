@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Router } from '@angular/router';
 import { DataserviceService } from 'src/app/service/dataservice.service';
 
+
 @Component({
   selector: 'app-owner-home',
   templateUrl: './owner-home.component.html',
@@ -14,6 +15,7 @@ export class OwnerHomeComponent {
   ownerData!: any;
   validuser: boolean = false;
   username!: string;
+  showPass: boolean=false;
 
   constructor(
     public router: Router,
@@ -58,10 +60,18 @@ export class OwnerHomeComponent {
       });
 
       if (this.validuser) {
+        this.dataservice.succesToster('Successfully','Log in succesfully',{
+          setTimeout:1000,
+          positionClass:'toast-top-right'
+        })
         this.router.navigateByUrl('owner/ownerLoginSuccess');
       }
       else {
-        alert('username or password is incorrect');
+        this.dataservice.worningToster('username and password is not correct','Warning',{
+          setTimeout:1000,
+          positionClass:'toast-top-right'
+        })
+        // alert('username or password is incorrect');
         this.router.navigateByUrl('owner/ownerHome')
       }
     }
@@ -75,6 +85,10 @@ export class OwnerHomeComponent {
     console.log('this.ownerData', this.ownerData);
     this.dataservice.ownerhotelData;
     console.log(this.dataservice.ownerhotelData)
+  }
+
+  vsiblePass(){
+    this.showPass=!this.showPass;
   }
   
 
