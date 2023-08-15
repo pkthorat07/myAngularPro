@@ -1,40 +1,139 @@
-<p>admin-sign-up works!</p>
+<br>
+<button class="bcbuttn" (click)="backtologin()" mat-raised-button color="accent">Back</button><br><br>
 
-<button (click)="backtologin()" mat-raised-button color="accent">Back</button><br><br>
+<div class="matformfield">
+    <h3>SignUp Form for HotelOwner</h3>
+    <form class="signupform" [formGroup]="adminSignupform">
+        <mat-form-field class="matinpt" appearance="outline">
+            <mat-label>Fullname</mat-label>
+            <input matInput type="text" formControlName="Fullname">
 
-<form class="signupform" [formGroup]="adminSignupform">
-    <mat-form-field>
-        <mat-label>Fullname</mat-label>
-        <input matInput type="text" formControlName="Fullname" placeholder="@Ex Pavan">
-    </mat-form-field><br><br>
+            <mat-hint *ngIf="!adminSignupform.get('Fullname')?.touched">
+                please enter your fullname
+            </mat-hint>
 
-    <label>Email</label>
-    <input type="text" formControlName="Email" placeholder="Enter your Email"><br><br>
+            <mat-error
+                *ngIf="adminSignupform.get('Fullname')?.errors?.['whiteSpace'] && !adminSignupform.get('Fullname')?.errors?.['minlength'] ">
+                name should not allowd whitespace
+            </mat-error>
 
-    <label>PanCard</label>
-    <input type="text" formControlName="PanCard"><br><br>
+            <mat-error
+                *ngIf="adminSignupform.get('Fullname')?.errors?.['minlength'] && !adminSignupform.get('Fullname')?.errors?.['pattern'] ">
+                Minimum 5 charecters
+            </mat-error>
 
-    <label>MobileNo</label>
-    <input type="number" formControlName="MobileNo" placeholder="+918958100000"><br><br>
+            <mat-error *ngIf="adminSignupform.get('Fullname')?.errors?.['pattern']">
+                Only alphabats
+            </mat-error>
+            <mat-error *ngIf="adminSignupform.get('Fullname')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+        </mat-form-field><br><br>
 
-    <label>AdharNo</label>
-    <input type="number" formControlName="AdharNo" placeholder="1234 5678 9123"><br><br>
+        <mat-form-field class="matinpt" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="Email" placeholder="Email@test.in">
 
-    <label>Gender</label><br><br>
-    <input type="radio" id="male" value="Male" formControlName="Gender">Male
-    <input type="radio" id="male" value="Female" formControlName="Gender">Female
-    <input type="radio" id="male" value="Other" formControlName="Gender">Other <br><br>
+            <mat-hint
+                *ngIf="!adminSignupform.get('Email')?.touched && adminSignupform.get('Email')?.errors?.['required']">
+                please enter your Email
+            </mat-hint>
 
-    <label>Username</label>
-    <input type="text" placeholder="Set Username" formControlName="Username"><br><br>
+            <mat-error *ngIf="adminSignupform.get('Email')?.errors?.['whiteSpace']">adminSignupform
+                please enter your validEmail
+            </mat-error>
 
-    <label>Password</label>
-    <input type="text" placeholder="set Password" formControlName="Password"><br><br>
+            <mat-error *ngIf="adminSignupform.get('Email')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+        </mat-form-field><br><br>
 
-    <label>confirmPassword</label>
-    <input type="text" placeholder="Confirm Password" formControlName="confirmPassword"><br><br>
+        <mat-form-field class="matinpt" appearance="outline">
+            <mat-label>PanCard</mat-label>
+            <input matInput type="text" formControlName="PanCard">
 
-    <button (click)="submit()">Submit</button>
+            <mat-hint
+                *ngIf="!adminSignupform.get('PanCard')?.touched && adminSignupform.get('PanCard')?.errors?.['required']">
+                please enter your panCard
+            </mat-hint>
 
+            <mat-error *ngIf="adminSignupform.get('PanCard')?.errors?.['required']">
+                this field is required*
+            </mat-error>
 
-</form>
+            <mat-error *ngIf="adminSignupform.get('PanCard')?.errors?.['pattern']">
+                please follow this pancard pattern ABCD123E
+            </mat-error>
+
+        </mat-form-field><br>
+
+        <mat-radio-group formControlName="Gender">
+            <mat-hint *ngIf="!adminSignupform.get('Gender')?.touched">select your Gender</mat-hint>
+            <mat-radio-button id="male" value="Male">Male </mat-radio-button>
+            <mat-radio-button id="female" value="Female">Female</mat-radio-button>
+            <mat-radio-button id="other" value="Other">Other</mat-radio-button><br>
+
+        </mat-radio-group><br><br>
+
+        <mat-form-field class="matinpt" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" placeholder="Set Username" formControlName="Username">
+
+            <mat-hint *ngIf="!adminSignupform.get('Username')?.touched">
+                please enter your username
+            </mat-hint>
+
+            <mat-error *ngIf="adminSignupform.get('Username')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="adminSignupform.get('Username')?.errors?.['pattern']">
+                please match the pattern*
+            </mat-error>
+
+            <mat-error *ngIf="adminSignupform.get('Username')?.errors?.['whiteSpace']">
+                should not allowed whitespaces
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <mat-form-field class="matinpt" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="text" placeholder="set Password" formControlName="Password">
+
+            <mat-hint *ngIf="!adminSignupform.get('Password')?.touched">
+                please set your Password
+            </mat-hint>
+
+            <mat-error *ngIf="adminSignupform.get('Password')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="adminSignupform.get('Password')?.errors?.['pattern']">
+                please match the pattern Pass@123
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <mat-form-field class="matinpt" appearance="outline">
+            <mat-label>confirmPassword</mat-label>
+            <input matInput type="text" placeholder="set confirmPassword" formControlName="confirmPassword">
+
+            <mat-hint *ngIf="!adminSignupform.get('confirmPassword')?.touched">
+                please set your confirmPassword
+            </mat-hint>
+
+            <mat-error *ngIf="adminSignupform.get('confirmPassword')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="adminSignupform.get('confirmPassword')?.errors?.['pattern']">
+                please match the pattern Pass@123
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <mat-checkbox>Accecpt all the terms and condition (TnC*)</mat-checkbox><br>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+    </form>
+</div>

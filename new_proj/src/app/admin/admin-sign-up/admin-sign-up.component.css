@@ -1,8 +1,18 @@
 
-
-
-
-.signupform{
-    min-width :150px;
-    max-width: 500px;
+.loginField{
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+.inputbox{
+    width: 250px;
+}
+.matformfield{
+    text-align: center;
+}
+.matinpt{
+    width: 400px;
 }

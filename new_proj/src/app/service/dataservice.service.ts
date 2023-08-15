@@ -10,7 +10,9 @@ export class DataserviceService {
   url='http://localhost:3000/';
   userName!:string;
   forgotPassword!:boolean;
+  adminhotelData: any;
   ownerhotelData: any;
+  userBookingData: any;
   id: any;
   dataById: any;
 

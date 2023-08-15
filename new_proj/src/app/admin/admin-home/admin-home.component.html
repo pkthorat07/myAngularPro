@@ -1,23 +1,136 @@
 <br>
-<button mat-raised-button color="accent" (click)="backtohome()">Back</button><br><br>
+<button  (click)="backtohome()" mat-raised-button color="accent">Back</button><br><br>
+<!-- <button  (click)="signUp()" mat-raised-button color="accent">signUp</button><br><br>
+<button  (click)="logInsuccess()" mat-raised-button color="accent">logInsuccess</button><br><br> -->
 
-<body class="bckbody">
+<div class="loginField">
+    <form [formGroup]="adminLogInform" >
+        <mat-form-field class="inputbox" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" placeholder="@Username" formControlName="Username">
 
-    <div class="logpa">
-        <h2 class="heading">Login Page</h2>
-        <form>
-            <mat-form-field appearance="outline">
-                <mat-label>Username</mat-label>
-                <input matInput type="text" class="inputbox">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Password</mat-label>
-                <input matInput type="password"  class="inputbox">
-            </mat-form-field>
-            <button mat-raised-button class="logbttn"> Login </button>
-        </form><br><br>
-        <a href="#">Forget Password?</a><br><br>
-        <button mat-warn-button (click)="signUpform()" class="signbttn">Create New Account</button>
+            <mat-hint *ngIf="!adminLogInform.get('Username')?.touched">
+                Enter your username
+            </mat-hint>
 
-    </div>
-</body>
+            <mat-error
+                *ngIf="adminLogInform.get('Username')?.errors?.['whiteSpace'] && !adminLogInform.get('Username')?.errors?.['minlength'] ">
+                name should not allowd whitespace
+            </mat-error>
+
+            <mat-error
+                *ngIf="adminLogInform.get('Username')?.errors?.['minlength'] && !adminLogInform.get('Username')?.errors?.['pattern'] ">
+                Minimum 5 charecters
+            </mat-error>
+
+            <mat-error *ngIf="adminLogInform.get('Username')?.errors?.['pattern']">
+                Only alphabats
+            </mat-error>
+            <mat-error *ngIf="adminLogInform.get('Username')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+        </mat-form-field><br><br>
+
+        <mat-form-field class="inputbox" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="showPass? 'text': 'password'" placeholder="Pass@123" formControlName="Password">
+            <mat-icon matSuffix (click)="vsiblePass()" *ngIf="!showPass">visibility_off</mat-icon>
+            <mat-icon matSuffix (click)="vsiblePass()" *ngIf="showPass">visibility</mat-icon>
+
+            <mat-hint *ngIf="!adminLogInform.get('Password')?.touched">
+                Enter your Password
+            </mat-hint>
+
+            <mat-error *ngIf="adminLogInform.get('Password')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="adminLogInform.get('Password')?.errors?.['pattern']">
+                please match the pattern Pass@123
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <button mat-raised-button color="primary" (click)="logInsuccess()">LogIn</button>&nbsp;
+        <button mat-raised-button color="primary" (click)="signUp()">SignUp</button><br><br>
+        <button mat-raised-button color="primary" >Forgot Password?</button><br>
+
+    </form><br>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <br>
+<button  (click)="backtohome()" mat-raised-button color="accent">Back</button><br><br>
+
+<div class="loginField">
+    <form [formGroup]="adminLogInform" >
+        <mat-form-field class="inputbox" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" placeholder="@Username" formControlName="Username">
+
+            <mat-hint *ngIf="!adminLogInform.get('Username')?.touched">
+                Enter your username
+            </mat-hint>
+
+            <mat-error
+                *ngIf="adminLogInform.get('Username')?.errors?.['whiteSpace'] && !adminLogInform.get('Username')?.errors?.['minlength'] ">
+                name should not allowd whitespace
+            </mat-error>
+
+            <mat-error
+                *ngIf="adminLogInform.get('Username')?.errors?.['minlength'] && !adminLogInform.get('Username')?.errors?.['pattern'] ">
+                Minimum 5 charecters
+            </mat-error>
+
+            <mat-error *ngIf="adminLogInform.get('Username')?.errors?.['pattern']">
+                Only alphabats
+            </mat-error>
+            <mat-error *ngIf="adminLogInform.get('Username')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+        </mat-form-field><br><br>
+
+        <mat-form-field class="inputbox" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="showPass? 'text': 'password'" placeholder="Pass@123" formControlName="Password">
+            <mat-icon matSuffix (click)="vsiblePass()" *ngIf="!showPass">visibility_off</mat-icon>
+            <mat-icon matSuffix (click)="vsiblePass()" *ngIf="showPass">visibility</mat-icon>
+
+            <mat-hint *ngIf="!adminLogInform.get('Password')?.touched">
+                Enter your Password
+            </mat-hint>
+
+            <mat-error *ngIf="adminLogInform.get('Password')?.errors?.['required']">
+                this field is required*
+            </mat-error>
+
+            <mat-error *ngIf="adminLogInform.get('Password')?.errors?.['pattern']">
+                please match the pattern Pass@123
+            </mat-error>
+
+        </mat-form-field><br><br>
+
+        <button mat-raised-button color="primary" (click)="logInForm()">LogIn</button>&nbsp;
+        <button mat-raised-button color="primary" (click)="signUpform()">SignUp</button><br><br>
+        <button mat-raised-button color="primary" >Forgot Password?</button><br>
+
+    </form><br>    
+
+     -->

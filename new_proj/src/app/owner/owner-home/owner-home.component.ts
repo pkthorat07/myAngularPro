@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { DataserviceService } from 'src/app/service/dataservice.service';
 
 
-@Component({
+@Component({ 
   selector: 'app-owner-home',
   templateUrl: './owner-home.component.html',
   styleUrls: ['./owner-home.component.css']
@@ -84,7 +84,7 @@ export class OwnerHomeComponent {
     this.ownerData = await this.dataservice.getApiCall(this.endpoint).toPromise()
     console.log('this.ownerData', this.ownerData);
     this.dataservice.ownerhotelData;
-    console.log(this.dataservice.ownerhotelData)
+    console.log('ownerhoteldata',this.dataservice.ownerhotelData)
   }
 
   vsiblePass(){

@@ -216,7 +216,32 @@
     }
   ],
   "admin": [],
-  "user": [],
+  "user": [
+    {
+      "Fullname": "Raman kale",
+      "Email": "raman@test.in",
+      "PanCard": "RAMK2148D",
+      "MobileNo": 8002465591,
+      "Gender": "Male",
+      "AdharNo": 517586634185,
+      "Username": "kkraman",
+      "Password": "Raman@123",
+      "confirmPassword": "Raman@123",
+      "id": 1
+    },
+    {
+      "Fullname": "komal bhuktare",
+      "Email": "komal@test.in",
+      "PanCard": "BKSA5526D",
+      "MobileNo": 8390226992,
+      "Gender": "Male",
+      "AdharNo": 75360198251,
+      "Username": "komalbk",
+      "Password": "Komal@123",
+      "confirmPassword": "Komal@123",
+      "id": 2
+    }
+  ],
   "hotelDetails": [
     {
       "hotelOwnerName": "pkthorat",

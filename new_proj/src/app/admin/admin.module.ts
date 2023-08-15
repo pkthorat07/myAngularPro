@@ -5,6 +5,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminSignUpComponent } from './admin-sign-up/admin-sign-up.component';
 import { ShareModule } from '../sharemodule/share/share.module';
+import { AdminLoginSuccessComponent } from './admin-login-success/admin-login-success.component';
 
 
 
@@ -14,7 +15,8 @@ import { ShareModule } from '../sharemodule/share/share.module';
   
     AdminHomeComponent,
             AdminLoginComponent,
-            AdminSignUpComponent
+            AdminSignUpComponent,
+            AdminLoginSuccessComponent
   ],
   imports: [
     CommonModule,

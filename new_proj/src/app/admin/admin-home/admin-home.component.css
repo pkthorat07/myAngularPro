@@ -1,49 +1,11 @@
-/* 
-
-/* .logform{
-    border: 1px solid black;
-    border: 1px solid black;
-    width: 250px;
-    height: 250px;
-    */
-   
-
-
---------------------
-
-
-.bckbody{
-    background-color: coral;
-}
-.heading{
-    color: blueviolet;
-}
-.logpa{
-    border: none;
-    width: 300px;
-    height: 400px;
+.loginField{
     position: relative;
     margin: auto;
-   
+    border: 1px solid black;
+    width: 250px;
+    padding: 20px;
     text-align: center;
-    background-color: aquamarine;
-}
-.logbttn{
-    width: 100px;
-    height: 40px;
-    background-color: rgb(172, 117, 223);
-    border: none;
-    cursor: pointer;
-}
-.signbttn{
-    background-color:green;
-    width: 150px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-
 }
 .inputbox{
-    width: 230px;
-    height: 25px;
+    width: 250px;
 }

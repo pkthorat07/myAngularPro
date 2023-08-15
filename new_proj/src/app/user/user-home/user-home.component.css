@@ -1,0 +1,11 @@
+.loginField{
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+.inputbox{
+    width: 250px;
+}
