@@ -1,1 +1,146 @@
-<p>home works!</p>
+
+ <div >
+  <form class="search">
+    <input type="text" name="cityName" placeholder="search city" [(ngModel)]="city"  >
+    <button class="clickbuttn" (click)="getWeatherapidata()">search</button>
+</form>
+</div> 
+
+
+
+<div class="large-container" >
+<div class="container" *ngIf="weatherData">
+    <div class="upper-data">
+    <img src="..//src/assets/cold.png" *ngIf="weatherData.main.temp <= 20" >
+    <img src="..//src/assets/hot.png" *ngIf="weatherData.main.temp > 20" >
+
+    <div class="weather-data">
+        <div class="location">{{weatherData.name}}</div>
+        <div class="temp-value">{{weatherData.main.temp | number : '1.00-0' }}°C</div>
+    </div>
+
+    </div>
+    <div class="lower-data">
+        <div class="info-label">
+            More Information
+        </div>
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/mint.png">
+                    <span>Min</span>
+                    <div class="info-block-value">
+                        {{weatherData.main.temp_min  | number : '1.0-0'}}°C
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/max.png">
+                    <span>Max</span>
+                    <div class="info-block-value">
+                        {{weatherData.main.temp_max | number : '1.00-0' }}°C
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/humidity.png">
+                    <span>Humidity</span>
+                    <div class="info-block-value">
+                        {{weatherData.main.humidity}}%
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/xwing.png" class="color">
+                    <span>Wind</span>
+                    <div class="info-block-value">
+                    {{weatherData.wind.speed}}Km
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!-- <div class="container">
+    <div class="upper-data">
+    <img src="..//src/assets/cold.png" >
+    <img src="..//src/assets/hot.png" *ngIf="14 <= 15" >
+
+    <div class="weather-data">
+        <div class="location">Nanded</div>
+        <div class="temp-value">{{10 | number : '1.0-0' }}°C</div>
+    </div>
+
+    </div>
+    <div class="lower-data">
+        <div class="info-label">
+            More Information
+        </div>
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/min.png">
+                    <span>Min</span>
+                    <div class="info-block-value">
+                        10°C
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/max.png">
+                    <span>Max</span>
+                    <div class="info-block-value">
+                        20°C
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/humidity.png">
+                    <span>Humidity</span>
+                    <div class="info-block-value">
+                        77%
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="..//src/assets/xwing.png" class="color">
+                    <span>Wind</span>
+                    <div class="info-block-value">
+                    10Km
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div> -->
