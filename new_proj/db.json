@@ -15,7 +15,7 @@
       "Email": "kiran@test.in",
       "PanCard": "KNML6026D",
       "Gender": "Male",
-      "Username": "kk",
+      "Username": "nkakiran",
       "Password": "Kiran@123",
       "id": 5
     },
@@ -27,111 +27,6 @@
       "Username": "ankykad",
       "Password": "Aniket@123",
       "id": 6
-    },
-    {
-      "Fullname": "jgj",
-      "Email": "hh",
-      "PanCard": "gg",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "id": 7
-    },
-    {
-      "Fullname": "vgh",
-      "Email": "",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 8
-    },
-    {
-      "Fullname": "fkbrrjb",
-      "Email": "",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 9
-    },
-    {
-      "Fullname": "kk",
-      "Email": "",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 10
-    },
-    {
-      "Fullname": "",
-      "Email": "",
-      "PanCard": "GET LOST",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 11
-    },
-    {
-      "Fullname": "DDDDDDDD",
-      "Email": "",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 12
-    },
-    {
-      "Fullname": "",
-      "Email": "xswwwwww",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 13
-    },
-    {
-      "Fullname": "",
-      "Email": "xswwwwww",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 14
-    },
-    {
-      "Fullname": "",
-      "Email": "",
-      "PanCard": "",
-      "MobileNo": "",
-      "AdharNo": "",
-      "Gender": "Other",
-      "Username": "",
-      "Password": "",
-      "confirmPassword": "",
-      "id": 15
     },
     {
       "Fullname": "SHUBHANGI DESHMUKH",
@@ -197,15 +92,6 @@
       "id": 23
     },
     {
-      "id": 24
-    },
-    {
-      "id": 25
-    },
-    {
-      "id": 26
-    },
-    {
       "Fullname": "SIDDHANT SALVE",
       "Email": "sidhu@test.in",
       "PanCard": "SSGS3215D",
@@ -215,7 +101,18 @@
       "id": 27
     }
   ],
-  "admin": [],
+  "admin": [
+    {
+      "Fullname": "KOMAL JADHAV",
+      "Email": "komal@test.in",
+      "PanCard": "KDJD4123D",
+      "Gender": "Female",
+      "Username": "jdkomal",
+      "Password": "Komal@123",
+      "confirmPassword": "Komal@123",
+      "id": 1
+    }
+  ],
   "user": [
     {
       "Fullname": "Raman kale",
@@ -244,32 +141,35 @@
   ],
   "hotelDetails": [
     {
-      "hotelOwnerName": "pkthorat",
+      "hotelOwnerName": "PAVAN THORAT",
       "hotelName": "Visawa Palace",
       "hotelAddress": "Shivaji Nagar, Nanded",
       "hotelContact": "02462-264810",
       "hotelsType": "Pure-Veg",
       "hotelRooms": 260,
-      " ": "Pass@123",
+      "Username": "pkthorat",
+      "Password": "Pass@123",
       "id": 1
     },
     {
-      "hotelOwnerName": "pkthorat",
-      "hotelName": "Ranwara",
+      "hotelOwnerName": "PAVAN THORAT",
+      "hotelName": "Visawa Palace",
       "hotelAddress": "Shivaji Nagar, Nanded",
       "hotelContact": "02462-264810",
       "hotelsType": "Pure-Veg",
       "hotelRooms": 260,
+      "Username": "pkthorat",
       "Password": "Pass@123",
       "id": 2
     },
     {
-      "hotelOwnerName": "pkthorat",
+      "hotelOwnerName": "PAVAN THORAT",
       "hotelName": "Visawa Palace",
       "hotelAddress": "Shivaji Nagar, Nanded",
       "hotelContact": "02462-264810",
       "hotelsType": "Pure-Veg",
       "hotelRooms": 260,
+      "Username": "pkthorat",
       "Password": "Pass@123",
       "id": 3
     },
@@ -280,16 +180,18 @@
       "hotelContact": "02462-215651",
       "hotelsType": "Veg and nonVeg",
       "hotelRooms": 160,
+      "Username": "mknimkar",
       "Password": "Mahesh@123",
       "id": 4
     },
     {
-      "hotelOwnerName": "SUDARSHAN MORE",
+      "hotelOwnerName": "More Sudarshan",
       "hotelName": "Hotel Midland Nanded",
       "hotelAddress": ", Nanded.",
       "hotelContact": "02462-221436",
       "hotelsType": "Non-Veg",
       "hotelRooms": 140,
+      "Username": "moresudhir",
       "Password": "Sudhir@123",
       "id": 5
     },
@@ -300,6 +202,7 @@
       "hotelContact": "02462-293256",
       "hotelsType": "Pure-Veg",
       "hotelRooms": 120,
+      "Username": "jumayu",
       "Password": "Mayur@123",
       "id": 6
     },
@@ -310,6 +213,7 @@
       "hotelContact": "02462-293256",
       "hotelsType": "Pure-Veg",
       "hotelRooms": 120,
+      "Username": "pdshubhu",
       "Password": "Shubhngi@123",
       "id": 7
     },
@@ -320,6 +224,7 @@
       "hotelContact": "02462-293256",
       "hotelsType": "Veg and nonVeg",
       "hotelRooms": 210,
+      "Username": "bkruhi",
       "Password": "Rohini@123",
       "id": 8
     },
@@ -330,6 +235,7 @@
       "hotelContact": "02462-262188",
       "hotelsType": "Pure-Veg",
       "hotelRooms": 240,
+      "Username": "jdkomal",
       "Password": "Komal@123",
       "id": 9
     },
@@ -344,13 +250,14 @@
       "id": 10
     },
     {
-      "hotelOwnerName": "pkthorat",
+      "hotelOwnerName": "PAVAN THORAT",
       "hotelName": "Hotel Pooja Garden",
       "hotelAddress": "Vishnupuri, Nanded",
       "hotelContact": "02462-324845",
       "hotelsType": "Veg and nonVeg",
       "hotelRooms": 102,
-      "Password": "Aniket@123",
+      "Username": "pkthorat",
+      "Password": "Pass@123",
       "id": 11
     },
     {
@@ -360,6 +267,7 @@
       "hotelContact": "02462-324845",
       "hotelsType": "Veg and nonVeg",
       "hotelRooms": 102,
+      "Username": "ankykad",
       "Password": "Aniket@123",
       "id": 12
     },
@@ -370,8 +278,67 @@
       "hotelContact": "02462-354455",
       "hotelsType": "Non-Veg",
       "hotelRooms": 150,
+      "Username": "jpshubhu",
       "Password": "Shubham@123",
       "id": 13
+    },
+    {
+      "hotelOwnerName": "PAVNT HORAT",
+      "hotelName": "The Royal Ross",
+      "hotelAddress": "Asara Nagar, Nanded",
+      "hotelContact": "02462-256341",
+      "hotelsType": "Veg and nonVeg",
+      "hotelRooms": 300,
+      "Username": "pkthorat",
+      "Password": "Pass@123",
+      "id": 14,
+      "hotelImages": [
+        "assets/img/pooja1.jpg"
+      ]
+    },
+    {
+      "hotelOwnerName": "More Sudarshan",
+      "hotelName": "Hotel Nandi",
+      "hotelAddress": "chatrapati chowk, Nanded",
+      "hotelContact": "02462-658125",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 430,
+      "Username": "mksudhir",
+      "Password": "Sudhir@123",
+      "id": 15
+    },
+    {
+      "hotelOwnerName": "PAVAN THORAT",
+      "hotelName": "Visawa Palace",
+      "hotelAddress": "Shivaji Nagar, Nanded",
+      "hotelContact": "02462-264810",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 260,
+      "Username": "pkthorat",
+      "Password": "Pass@123",
+      "id": 16
+    },
+    {
+      "hotelOwnerName": "PAVAN THORAT",
+      "hotelName": "Visawa Palace",
+      "hotelAddress": "Shivaji Nagar, Nanded",
+      "hotelContact": "02462-264810",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 260,
+      "Username": "pkthorat",
+      "Password": "Pass@123",
+      "id": 17
+    },
+    {
+      "hotelOwnerName": "PAVAN THORAT",
+      "hotelName": "Visawa Palace",
+      "hotelAddress": "Shivaji Nagar, Nanded",
+      "hotelContact": "02462-264810",
+      "hotelsType": "Pure-Veg",
+      "hotelRooms": 260,
+      "Username": "pkthorat",
+      "Password": "Pass@123",
+      "id": 18
     }
   ],
   "hotelBookings": []

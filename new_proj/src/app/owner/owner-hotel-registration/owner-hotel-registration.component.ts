@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder,FormGroup, FormsModule, ReactiveFormsModule,Validators } from '@angular/forms';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { Router } from '@angular/router';
-import { identity } from 'rxjs';
 import { DataserviceService } from 'src/app/service/dataservice.service';
 import { __values } from 'tslib';
 
@@ -18,6 +16,7 @@ export class OwnerHotelRegistrationComponent {
   postrespoData:any;
   editId: any;
   dataById: any;
+  hotelImages: any;
 
   constructor(
     public router: Router,
@@ -45,7 +44,9 @@ export class OwnerHotelRegistrationComponent {
       hotelContact:[this.dataById? this.dataById.hotelContact:'',[Validators.required, Validators.pattern('^[0-9-]*$')]],
       hotelsType:[this.dataById? this.dataById.hotelsType:''],
       hotelRooms:[this.dataById? this.dataById.hotelRooms:'',[Validators.required,Validators.pattern('^[0-9]*$')]],
-      Password:[this.dataById? this.dataById.Password:'',[Validators.required,Validators.pattern("^[A-Za-z0-9@]{8,12}$")]]
+      Username:['',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.whitespaceValidator]],
+      Password:[this.dataById? this.dataById.Password:'',[Validators.required,Validators.pattern("^[A-Za-z0-9@]{8,12}$")]],
+      hotelImages:[this.dataById? this.dataById.Password:'',[]]
 
     })
 
@@ -67,7 +68,9 @@ export class OwnerHotelRegistrationComponent {
       hotelContact: this.ownerHotelRegisterForm.value.hotelContact,
       hotelsType: this.ownerHotelRegisterForm.value.hotelsType,
       hotelRooms: this.ownerHotelRegisterForm.value.hotelRooms,
-      Password: this.ownerHotelRegisterForm.value.Password
+      Username: this.ownerHotelRegisterForm.value.Username,
+      Password: this.ownerHotelRegisterForm.value.Password,
+      hotelImages: this.hotelImages
     }
     // this.dataservice.PostApiCall(endpoint,requestData).subscribe(respo=>{
     //   console.log('respo',respo)
@@ -84,14 +87,23 @@ export class OwnerHotelRegistrationComponent {
 
 
   }
-
   backt(){
     this.router.navigateByUrl('owner/ownerLoginSuccess')
   }
+
+  // onFileSelected(event:any){
+  //   let images =[...event.target.files]
+  //   let fileNames = images.map((item:any)=>{
+  //     return "assets/img/" + item.name
+  //   })
+  //   this.hotelImages = [...fileNames]
+  }
+
+  
 
  
 
  
   
 
-}
+

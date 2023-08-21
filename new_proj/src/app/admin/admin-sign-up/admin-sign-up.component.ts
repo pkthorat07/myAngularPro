@@ -36,9 +36,9 @@ export class AdminSignUpComponent {
     this.adminSignupform = this.formbuilder.group({    
       Fullname: ['',[Validators.required, Validators.minLength(5),Validators.pattern('[a-z A-Z]*$'),this.dataservice.whitespaceValidator]],
       Email: ['',[Validators.required, Validators.email,this.dataservice.whitespaceValidator ]],
-      PanCard:['',[Validators.required, Validators.pattern('[A-Z0-9]{9}')]],
-      MobileNo:['',[Validators.required]],
-      AdharNo:['',[Validators.required]],
+      PanCard:['',[Validators.required, Validators.pattern('[A-Z0-9]{10}')]],
+      // MobileNo:['',[Validators.required]],
+      // AdharNo:['',[Validators.required]],
       Gender:['',[Validators.required,]],
       Username:['',[Validators.required,Validators.pattern("^[a-z0-9_-]{6,15}$"),this.dataservice.whitespaceValidator]],
       Password:['',[Validators.required,Validators.pattern("^[A-Za-z0-9@]{8,12}$")]],
@@ -51,18 +51,20 @@ export class AdminSignUpComponent {
       Fullname : this.adminSignupform.value.Fullname,
       Email: this.adminSignupform.value.Email,
       PanCard: this.adminSignupform.value.PanCard,
-      MobileNo: this.adminSignupform.value.MobileNo,
+      // MobileNo: this.adminSignupform.value.MobileNo,
       Gender: this.adminSignupform.value.Gender,
-      AdharNo:this.adminSignupform.value.AdharNo,
+      // AdharNo:this.adminSignupform.value.AdharNo,
       Username: this.adminSignupform.value.Username,
       Password: this.adminSignupform.value.Password,
       confirmPassword: this.adminSignupform.value.confirmPassword
     }
     console.log('request',Formbody)
 
-    this.postresponce = await this.dataservice.PostApiCall(this.journey,Formbody ).toPromise()
-        console.log('userSignupform', this.postresponce)  
-      this.router.navigateByUrl('admin/adminLoginSuccess')
+    this.dataservice.PostApiCall(this.journey,Formbody).subscribe(res=>{
+      this.postresponce = res
+      console.log(this.postresponce);
+    }) 
+    this.router.navigateByUrl('admin/adminLoginSuccess')
 
 }
 

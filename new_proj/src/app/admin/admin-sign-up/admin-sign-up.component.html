@@ -2,7 +2,7 @@
 <button class="bcbuttn" (click)="backtologin()" mat-raised-button color="accent">Back</button><br><br>
 
 <div class="matformfield">
-    <h3>SignUp Form for HotelOwner</h3>
+    <h3>Admin-SignUp Form</h3>
     <form class="signupform" [formGroup]="adminSignupform">
         <mat-form-field class="matinpt" appearance="outline">
             <mat-label>Fullname</mat-label>
@@ -62,7 +62,7 @@
             </mat-error>
 
             <mat-error *ngIf="adminSignupform.get('PanCard')?.errors?.['pattern']">
-                please follow this pancard pattern ABCD123E
+                please follow this pancard pattern ABCD1234E
             </mat-error>
 
         </mat-form-field><br>

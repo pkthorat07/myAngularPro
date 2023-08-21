@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule,Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+// import { DialogComponent } from 'src/app/owner/dialog/dialog.component';
 import { DataserviceService } from 'src/app/service/dataservice.service';
 
 
@@ -21,7 +23,8 @@ export class AdminHomeComponent{
     public router : Router,
     public reactiveForm: ReactiveFormsModule,
     public formBuilder: FormBuilder,
-    public dataservice: DataserviceService
+    public dataservice: DataserviceService,
+    public dialoge: MatDialog
   ){}
 
   backtohome(){
@@ -33,6 +36,9 @@ export class AdminHomeComponent{
   logInsuccess(){
     this.router.navigateByUrl('admin/adminLoginSuccess')
   }
+  // dialogbox(){
+  //   const dialogRef= this.dialoge.open(DialogComponent)
+  // }
 
   ngOnInit(){
     this.endpoint = this.dataservice.journey;

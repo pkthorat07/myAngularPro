@@ -126,6 +126,28 @@
 
             </mat-form-field><br><br>
 
+            <mat-form-field class="matinpt" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" placeholder="Set Username" formControlName="Username">
+    
+                <mat-hint *ngIf="!ownerHotelRegisterForm.get('Username')?.touched">
+                    please enter your username
+                </mat-hint>
+    
+                <mat-error *ngIf="ownerHotelRegisterForm.get('Username')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+    
+                <mat-error *ngIf="ownerHotelRegisterForm.get('Username')?.errors?.['pattern']">
+                    please match the pattern*
+                </mat-error>
+    
+                <mat-error *ngIf="ownerHotelRegisterForm.get('Username')?.errors?.['whiteSpace']">
+                    should not allowed whitespaces
+                </mat-error>
+    
+            </mat-form-field><br><br>
+
             <mat-form-field class="matinpt"  appearance="outline">
                 <mat-label>Password</mat-label>
                 <input  matInput type="text" formControlName="Password">

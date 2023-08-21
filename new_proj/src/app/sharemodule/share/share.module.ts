@@ -13,6 +13,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ToastrModule } from 'ngx-toastr';
 import {MatTableModule} from '@angular/material/table';
 import { MatDialogModule} from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -35,8 +37,12 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatButtonToggleModule,
     MatTableModule,  
     MatDialogModule,
-    
+    MatSortModule,
+    MatPaginatorModule,
     ToastrModule.forRoot(),
+
+
+    
   ],
 
   exports: [
@@ -53,7 +59,8 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatButtonToggleModule,
     MatDialogModule,
-    
+    MatSortModule,
+    MatPaginatorModule,
     
 
   ]

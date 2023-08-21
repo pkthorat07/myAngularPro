@@ -78,14 +78,17 @@ export class OwnerHomeComponent {
 
   }
   async getownerApicall() {
-    // this.dataservice.getApiCall(this.endpoint).subscribe(Respo=>{
-    //   this.ownerData = Respo;
+    this.dataservice.getApiCall(this.endpoint).subscribe(Respo=>{
+      this.ownerData = Respo;
+          console.log('this.ownerData', this.ownerData);
+
     // })
-    this.ownerData = await this.dataservice.getApiCall(this.endpoint).toPromise()
-    console.log('this.ownerData', this.ownerData);
-    this.dataservice.ownerhotelData;
-    console.log('ownerhoteldata',this.dataservice.ownerhotelData)
-  }
+    // this.ownerData = await this.dataservice.getApiCall(this.endpoint).toPromise()
+    // console.log('this.ownerData', this.ownerData);
+    // this.dataservice.ownerhotelData;
+    // console.log('ownerhoteldata',this.dataservice.ownerhotelData)
+    })
+}
 
   vsiblePass(){
     this.showPass=!this.showPass;

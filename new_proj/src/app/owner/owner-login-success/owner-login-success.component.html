@@ -20,6 +20,7 @@
             <td> {{tabledata.hotelContact}} </td>  
             <td> {{tabledata.hotelsType}} </td>  
             <td> {{tabledata.hotelRooms}} </td>  
+            <td><img [src]="tabledata.hotelImage" ></td>
             <td><mat-icon (click)="editUpdate(tabledata.id)" >edit</mat-icon></td>  
             <td><mat-icon (click)="Delete(tabledata.id)">delete</mat-icon></td> 
         </tr>

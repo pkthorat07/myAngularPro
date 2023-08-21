@@ -12,7 +12,7 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class OwnerLoginSuccessComponent {
   hotelDetails:any;
   Username! : string;
-  tableheading: string[] =['hotelOwnerName','hotelName','hotelAddress','hotelContact','hotelsType','hotelRooms','Edit','Delete']
+  tableheading: string[] =['hotelOwnerName','hotelName','hotelAddress','hotelContact','hotelsType','hotelRooms','hotelImage','Edit','Delete']
   Useername: any;
   userHotelDetails:any[] = [];
   showtable:boolean=false;
@@ -65,7 +65,7 @@ export class OwnerLoginSuccessComponent {
 
   hotelDetailsByOwner(){
     this.hotelDetails.forEach((element:any)=>{
-      if(element.hotelOwnerName === this.Useername){
+      if(element.Username === this.Useername){
         this.userHotelDetails.push(element)
       }
   })
