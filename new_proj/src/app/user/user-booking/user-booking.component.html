@@ -1,0 +1,120 @@
+<p>user-booking works!</p>
+
+<div>
+
+    <div class="matformfield">
+        <form [formGroup]="userbookingform">
+            <mat-form-field class="matinpt" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput typUsernamee="text" placeholder="@Username" formControlName="Username">
+
+                <mat-hint *ngIf="!userbookingform.get('Username')?.touched">
+                    Enter your username
+                </mat-hint>
+
+                <mat-error
+                    *ngIf="userbookingform.get('Username')?.errors?.['whiteSpace'] && !userbookingform.get('Username')?.errors?.['minlength'] ">
+                    name should not allowd whitespace
+                </mat-error>
+
+                <mat-error
+                    *ngIf="userbookingform.get('Username')?.errors?.['minlength'] && !userbookingform.get('Username')?.errors?.['pattern'] ">
+                    Minimum 5 charecters
+                </mat-error>
+
+                <mat-error *ngIf="userbookingform.get('Username')?.errors?.['pattern']">
+                    Only alphabats
+                </mat-error>
+                <mat-error *ngIf="userbookingform.get('Username')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+            </mat-form-field><br><br>
+
+            <mat-form-field class="matinpt" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="text" formControlName="Email" placeholder="Email@test.in">
+    
+                <mat-hint
+                    *ngIf="!userbookingform.get('Email')?.touched && userbookingform.get('Email')?.errors?.['required']">
+                    please enter your Email
+                </mat-hint>
+    
+                <mat-error *ngIf="userbookingform.get('Email')?.errors?.['whiteSpace']">
+                    please enter your validEmail
+                </mat-error>
+    
+                <mat-error *ngIf="userbookingform.get('Email')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+            </mat-form-field><br><br>
+
+            <mat-form-field class="matinpt" appearance="outline">
+                <mat-label>PanCard</mat-label>
+                <input matInput type="text" formControlName="PanCard">
+    
+                <mat-hint
+                    *ngIf="!userbookingform.get('PanCard')?.touched && userbookingform.get('PanCard')?.errors?.['required']">
+                    please enter your panCard
+                </mat-hint>
+    
+                <mat-error *ngIf="userbookingform.get('PanCard')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+    
+                <mat-error *ngIf="userbookingform.get('PanCard')?.errors?.['pattern']">
+                    please follow this pancard pattern ABCD123E
+                </mat-error>
+    
+            </mat-form-field><br><br>
+
+            <mat-form-field class="matinpt" appearance="outline">
+                <mat-label>Adhar No</mat-label>
+                <input matInput type="number" formControlName="adharNo">
+    
+                <mat-hint
+                    *ngIf="!userbookingform.get('adharNo')?.touched && userbookingform.get('adharNo')?.errors?.['required']">
+                    please enter your adharNo
+                </mat-hint>
+    
+                <mat-error *ngIf="userbookingform.get('adharNo')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+            
+            </mat-form-field><br><br>
+
+            <mat-form-field class="matinpt" appearance="outline">
+                <mat-label>Mobile No</mat-label>
+                <input matInput type="number" formControlName="mobileNo">
+    
+                <mat-hint
+                    *ngIf="!userbookingform.get('mobileNo')?.touched && userbookingform.get('mobileNo')?.errors?.['required']">
+                    please enter your mobileNo
+                </mat-hint>
+    
+                <mat-error *ngIf="userbookingform.get('mobileNo')?.errors?.['required']">
+                    this field is required*
+                </mat-error>
+            
+            </mat-form-field><br><br>
+
+            <!-- <mat-form-field>
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker" >
+                  <input matStartDate placeholder="Start date" formControlName="Date" >
+                  <input matEndDate placeholder="End date" formControlName="Date">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field><br><br>  -->
+
+
+        <button mat-raised-button color="accent" (click)="submit()">submit</button>
+
+         
+        </form><br>
+
+
+    </div>
+
+</div>

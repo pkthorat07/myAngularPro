@@ -1,24 +1,53 @@
- <p>user-login-success works!</p>
+<div class="site-heading">
+  <nav class="navbar">
+    <div class="hotel-heading">
+      Nandedhotels.in
+    </div>
+    <ul class="nav-ul">
+      <li><a href="#"></a>Register</li>
+      <li><a href="#"></a>SignUp</li>
 
-<!--<div class="container">
-    <mat-card *ngFor="let hotel of hotels">
-        <div class="img" id="box">
-            <img mat-card-image src="https://source.unsplash.com/1600x900/?{{hotel.img}}" alt="Hotel Image">
-        </div>
-        <div class="img">
-            <mat-card-title> {{hotel.name}} </mat-card-title>
-            <mat-divider></mat-divider>
-            <mat-card-content><b> Contact :</b> {{hotel.phone}} </mat-card-content>
-            <mat-card-content><b> Email : </b>{{hotel.email}} </mat-card-content>
-            <mat-card-content><b>Special Dish : </b>{{hotel.menu}} </mat-card-content>
-            <mat-card-content><b>Discription : </b>{{hotel.discription}} </mat-card-content>
-            <mat-card-content><b>Location : </b>{{hotel.address}} </mat-card-content>
-            <mat-card-content><b>Available rooms : </b>{{hotel.arooms}} </mat-card-content>
-            <mat-card-content><b>Workers : </b>{{hotel.workers}} </mat-card-content>
-            <mat-card-footer>
-                <button mat-raised-button color="accent" (click)="openBookingform()">Book Hotel</button>
-            </mat-card-footer>
-        </div>
-    </mat-card>
+    </ul>
+  </nav>
+  <nav>
+    <ul class="containt">
+      <li><a href="#"></a>Stays</li>
+      <li><a href="#"></a>Flights</li>
+      <li><a href="#"></a>Carrentals</li>
+      <li><a href="#"></a>Airport taxi</li>
+      <li><a href="#"></a>Attractions</li>
+    </ul>
+  </nav>
 
-</div> -->
+  <div class="header">
+    <h1>Find your next stay</h1>
+    <p>Search low prices on hotels, homes and much more...</p>
+  </div>
+
+</div><br><br>
+
+
+<div class="mat-container">
+  <mat-card class="mat-card" *ngFor="let hotel of Data">
+    <img [src]='src' class="akimg">
+
+    <mat-card-header class="card-heading">
+      <mat-card-title>{{hotel.hotelName}}</mat-card-title>
+      <mat-card-subtitle>{{hotel.hotelOwnerName}}</mat-card-subtitle>
+    </mat-card-header><br><br>
+
+    <mat-card-content class="card-details">
+      <p>{{hotel.hotelAddress}} </p>
+      <p>Contact us: {{hotel.hotelContact}}</p>
+      <p> HotelTye: {{hotel.hotelsType}}</p>
+      <p>AvailableRooms: {{hotel.hotelRooms}}</p>
+    </mat-card-content>
+
+    <mat-card-actions class="bttn-action">
+      <button mat-raised-button color="accent" (click)="book()" >Book Now</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
+

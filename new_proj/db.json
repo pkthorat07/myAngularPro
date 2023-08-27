@@ -111,6 +111,16 @@
       "Password": "Komal@123",
       "confirmPassword": "Komal@123",
       "id": 1
+    },
+    {
+      "Fullname": "Pavan Thorat",
+      "Email": "pavan@test.in",
+      "PanCard": "AWSPT5862D",
+      "Gender": "Male",
+      "Username": "pkthorat",
+      "Password": "Pass@123",
+      "confirmPassword": "Pass@123",
+      "id": 2
     }
   ],
   "user": [
@@ -141,39 +151,6 @@
   ],
   "hotelDetails": [
     {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Visawa Palace",
-      "hotelAddress": "Shivaji Nagar, Nanded",
-      "hotelContact": "02462-264810",
-      "hotelsType": "Pure-Veg",
-      "hotelRooms": 260,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 1
-    },
-    {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Visawa Palace",
-      "hotelAddress": "Shivaji Nagar, Nanded",
-      "hotelContact": "02462-264810",
-      "hotelsType": "Pure-Veg",
-      "hotelRooms": 260,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 2
-    },
-    {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Visawa Palace",
-      "hotelAddress": "Shivaji Nagar, Nanded",
-      "hotelContact": "02462-264810",
-      "hotelsType": "Pure-Veg",
-      "hotelRooms": 260,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 3
-    },
-    {
       "hotelOwnerName": "MAHESH NIMKAR",
       "hotelName": "Hotel Akruti",
       "hotelAddress": "Hanumangad Namaskar chowk, Nanded.",
@@ -182,7 +159,7 @@
       "hotelRooms": 160,
       "Username": "mknimkar",
       "Password": "Mahesh@123",
-      "id": 4
+      "id": 1
     },
     {
       "hotelOwnerName": "More Sudarshan",
@@ -193,7 +170,7 @@
       "hotelRooms": 140,
       "Username": "moresudhir",
       "Password": "Sudhir@123",
-      "id": 5
+      "id": 2
     },
     {
       "hotelOwnerName": "MAYUR AMBATWAR",
@@ -204,7 +181,7 @@
       "hotelRooms": 120,
       "Username": "jumayu",
       "Password": "Mayur@123",
-      "id": 6
+      "id": 3
     },
     {
       "hotelOwnerName": "SHUBHANGI DESHMUKH",
@@ -215,7 +192,7 @@
       "hotelRooms": 120,
       "Username": "pdshubhu",
       "Password": "Shubhngi@123",
-      "id": 7
+      "id": 4
     },
     {
       "hotelOwnerName": "ROHINI BHUKTARE",
@@ -226,7 +203,7 @@
       "hotelRooms": 210,
       "Username": "bkruhi",
       "Password": "Rohini@123",
-      "id": 8
+      "id": 5
     },
     {
       "hotelOwnerName": "KOMAL JADHAV",
@@ -237,7 +214,7 @@
       "hotelRooms": 240,
       "Username": "jdkomal",
       "Password": "Komal@123",
-      "id": 9
+      "id": 6
     },
     {
       "hotelOwnerName": "KIRAN KHANDARE",
@@ -247,18 +224,7 @@
       "hotelsType": "Pure-Veg",
       "hotelRooms": 102,
       "Password": "Kiran@123",
-      "id": 10
-    },
-    {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Hotel Pooja Garden",
-      "hotelAddress": "Vishnupuri, Nanded",
-      "hotelContact": "02462-324845",
-      "hotelsType": "Veg and nonVeg",
-      "hotelRooms": 102,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 11
+      "id": 7
     },
     {
       "hotelOwnerName": "ANIKET KADAM",
@@ -269,7 +235,7 @@
       "hotelRooms": 102,
       "Username": "ankykad",
       "Password": "Aniket@123",
-      "id": 12
+      "id": 8
     },
     {
       "hotelOwnerName": "SHUBHAN PADADE",
@@ -280,21 +246,7 @@
       "hotelRooms": 150,
       "Username": "jpshubhu",
       "Password": "Shubham@123",
-      "id": 13
-    },
-    {
-      "hotelOwnerName": "PAVNT HORAT",
-      "hotelName": "The Royal Ross",
-      "hotelAddress": "Asara Nagar, Nanded",
-      "hotelContact": "02462-256341",
-      "hotelsType": "Veg and nonVeg",
-      "hotelRooms": 300,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 14,
-      "hotelImages": [
-        "assets/img/pooja1.jpg"
-      ]
+      "id": 9
     },
     {
       "hotelOwnerName": "More Sudarshan",
@@ -305,41 +257,17 @@
       "hotelRooms": 430,
       "Username": "mksudhir",
       "Password": "Sudhir@123",
-      "id": 15
-    },
-    {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Visawa Palace",
-      "hotelAddress": "Shivaji Nagar, Nanded",
-      "hotelContact": "02462-264810",
-      "hotelsType": "Pure-Veg",
-      "hotelRooms": 260,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 16
-    },
-    {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Visawa Palace",
-      "hotelAddress": "Shivaji Nagar, Nanded",
-      "hotelContact": "02462-264810",
-      "hotelsType": "Pure-Veg",
-      "hotelRooms": 260,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 17
-    },
-    {
-      "hotelOwnerName": "PAVAN THORAT",
-      "hotelName": "Visawa Palace",
-      "hotelAddress": "Shivaji Nagar, Nanded",
-      "hotelContact": "02462-264810",
-      "hotelsType": "Pure-Veg",
-      "hotelRooms": 260,
-      "Username": "pkthorat",
-      "Password": "Pass@123",
-      "id": 18
+      "id": 10
     }
   ],
-  "hotelBookings": []
+  "hotelBookings": [
+    {
+      "Username": "pkthorat",
+      "Email": "pavan@test,in",
+      "PanCard": "SMXM2565D",
+      "mobileNo": 7507592465,
+      "adharNo": 1245362155105,
+      "id": 1
+    }
+  ]
 }

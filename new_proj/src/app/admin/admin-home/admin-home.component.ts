@@ -33,9 +33,9 @@ export class AdminHomeComponent{
   signUp(){
     this.router.navigateByUrl('admin/signUp')
   }
-  logInsuccess(){
-    this.router.navigateByUrl('admin/adminLoginSuccess')
-  }
+  // logInsuccess(){
+  //   this.router.navigateByUrl('admin/adminLoginSuccess')
+  // }
   // dialogbox(){
   //   const dialogRef= this.dialoge.open(DialogComponent)
   // }

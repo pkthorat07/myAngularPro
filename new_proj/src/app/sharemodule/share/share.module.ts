@@ -15,6 +15,8 @@ import {MatTableModule} from '@angular/material/table';
 import { MatDialogModule} from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule} from '@angular/material/datepicker'
 
 
 
@@ -39,7 +41,11 @@ import { MatSortModule } from '@angular/material/sort';
     MatDialogModule,
     MatSortModule,
     MatPaginatorModule,
+    MatNativeDateModule,
     ToastrModule.forRoot(),
+    MatDatepickerModule
+  
+    
 
 
     
@@ -61,6 +67,10 @@ import { MatSortModule } from '@angular/material/sort';
     MatDialogModule,
     MatSortModule,
     MatPaginatorModule,
+    MatNativeDateModule,
+    MatDatepickerModule
+    
+    
     
 
   ]

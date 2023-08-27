@@ -11,7 +11,7 @@ import { DataserviceService } from 'src/app/service/dataservice.service';
 export class UserHomeComponent {
   userLogInform! : FormGroup;
   endpoint!: string;
-  ownerData!: any;
+  userData!: any;
   validuser: boolean = false;
   username!: string;
   showPass: boolean=false;
@@ -52,9 +52,9 @@ export class UserHomeComponent {
       console.log('userName',this.dataservice.userName);
 
     }
-    if (this.ownerData) {
-      this.ownerData.find((ownerData: any) => {
-        if (ownerData.Username === this.userLogInform.value.Username && ownerData.Password === this.userLogInform.value.Password) {
+    if (this.userData) {
+      this.userData.find((userData: any) => {
+        if (userData.Username === this.userLogInform.value.Username && userData.Password === this.userLogInform.value.Password) {
           this.validuser = true
         }
       });  
@@ -68,7 +68,7 @@ export class UserHomeComponent {
       }
       else {
         this.dataservice.worningToster('username and password is not correct','Warning',{
-          setTimeout:1000,
+          setTimeout:500,
           positionClass:'toast-top-right'
         })
         // alert('username or password is incorrect');
@@ -82,8 +82,8 @@ export class UserHomeComponent {
 async getownerApicall(){
 
 
-  this.ownerData = await this.dataservice.getApiCall(this.endpoint).toPromise()
-    console.log('this.userData', this.ownerData);
+  this.userData = await this.dataservice.getApiCall(this.endpoint).toPromise()
+    console.log('this.userData', this.userData);
     // this.dataservice.userBookingData;
     // console.log(this.dataservice.userBookingData)
   }
@@ -106,3 +106,4 @@ async getownerApicall(){
 
 
 }
+  

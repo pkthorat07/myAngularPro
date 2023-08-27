@@ -7,3 +7,110 @@
 .matinpt{
     width: 400px;
 }
+
+.site-heading{
+    position: relative;
+    width: 100%;
+    border: 1px solid black;
+    height: 50%;
+    background-color: rgb(124, 53, 174);
+}
+.hotel-heading {
+    font-size: 30px;
+    margin-top: 5px;
+    padding: 25px 10px;
+    width: fit-content;
+    color: aquamarine;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li{
+   display: inline-block;
+   padding: 20px ;
+   color: aquamarine;
+    font-family: cursive;
+    cursor: pointer;
+}
+h1 {
+	font-size: 50px;
+	font-family: cursive;
+	color: aquamarine;
+    width: 100%;
+    margin: 10px;
+}
+
+.nav-ul{
+    float: right;
+}
+.containt{
+    margin: 0;
+	padding: 0;
+}
+
+.header p{
+    margin: 10px;
+	font-size: 25px;
+	padding: 10px;
+	color: aquamarine;
+}
+li:hover{
+    border-radius:20px;
+    background-color: blueviolet;
+}
+
+.mat-container{
+    border: 1px solid black;
+    width: 70%;
+    margin: 50px;
+    padding: 10px 30px;
+    /* position: relative;
+	left: 200px; */ 
+}
+.akimg{
+    width: 200px;
+    height:200px;
+    
+}
+.mat-card{
+    min-width: 60%;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	height: 43px;
+	max-height: 330px;
+    padding: 15px;
+	min-height: 250px;
+    background-color: cadetblue;
+	
+}
+.card-details{
+    position: absolute;
+	left: 208px;
+	top: 86px;
+    
+}
+ 
+
+
+.card-heading mat-card-title{
+    position: absolute;
+	left: 220px;
+	top: 20px;
+	font-size: 30px;
+	color: blueviolet;
+}
+.card-heading mat-card-subtitle{
+    position: absolute;
+	left: 220px;
+	top: 55px;
+}
+.bttn-action{
+    position: absolute;
+	left: 218px;
+	top: 200px;
+}
